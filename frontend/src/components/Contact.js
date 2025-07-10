@@ -6,7 +6,7 @@ function Contact() {
       <div className="max-w-screen-xl mx-auto justify-center items-center mt-12 mb-12">
         <div className="justify-center items-center text-center mt-8 space-y-4">
           <div className="grid justify-center items-center text-center">
-            <h1 className="font-bold text-blue-900 text-5xl p-4 mb-4">
+            <h1 className="font-bold text-blue-800 text-5xl p-4 mb-4">
               Get In Touch
             </h1>
             <div className="flex space-x-8 mt-4">

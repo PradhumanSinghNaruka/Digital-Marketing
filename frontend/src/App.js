@@ -5,6 +5,7 @@ import Steps from './components/Steps';
 import Product from './components/Product';
 import Why from './components/Why';
 import Contact from './components/Contact';
+import Questions from './components/Questions';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Why />
         <Product />
         <Contact />
+        <Questions />
       </div>
     </>
   )
