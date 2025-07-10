@@ -45,7 +45,7 @@ function Steps() {
   ];
   return (
     <div className="w-full bg-white text-black mt-8 mb-12">
-      <div className="max-w-screen-2xl container mx-auto">
+      <div className="max-w-screen-2xl container mx-auto p-6">
         <div className="max-w-screen-xl justify-center items-center space-y-14">
           <p className="text-lg text-center font-semibold text-wrap">
             Best Digital Marketing Agency In Jaipur

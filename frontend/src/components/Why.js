@@ -8,7 +8,7 @@ function Why() {
       style={{ backgroundImage: { photo5 } }}
     >
       <div className="absolute inset-0 bg-black/40">
-        <img src={photo5} className="h-full w-full" />
+        <img src={photo5} className="h-full w-full brightness-50" />
       </div>
       <div className="relative z-10 flex flex-col items-center justify-center h-screen text-white text-center px-4 space-y-12 mt-12">
         <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">
@@ -18,7 +18,7 @@ function Why() {
           Are you moving from one digital marketing agency to another in search
           of that tailor-made Search Engine Optimization (SEO) plan that
           delivers your business goals? Look no further. Your search for the
-          best digital marketing agency ends here - with AdLift.
+          best digital marketing agency ends here - with Searchenix.
         </p>
         <p className="text-lg md:text-xl text-wrap max-w-2xl">
           At AdLift, we don’t just focus on keywords. We focus on the big

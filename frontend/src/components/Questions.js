@@ -62,7 +62,7 @@ function Questions() {
               <div key={index} className="mb-4 border-b pb-4 space-y-4 border rounded-xl p-6 shadow-sm bg-white">
                 <button
                   onClick={() => toggleFAQ(index)}
-                  className="text-left w-full text-xl md:text-2xl font-medium text-black hover:underline"
+                  className="text-left w-full text-xl md:text-2xl font-medium text-black hover:underline hover:text-blue-500 duration-300"
                 >
                   {faq.question}
                 </button>

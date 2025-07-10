@@ -5,6 +5,7 @@ import { FaGears } from "react-icons/fa6";
 import { FaLaptopCode } from "react-icons/fa6";
 import { VscGraph } from "react-icons/vsc";
 import { FaShareAlt } from "react-icons/fa";
+import photo1 from "../image/logo4.png";
 
 function Hero() {
   return (
@@ -13,7 +14,7 @@ function Hero() {
       style={{ backgroundImage: { photo5 } }}
     >
       <div className="absolute inset-0 bg-black/40">
-        <img src={photo5} className="h-full w-full"/>
+        <img src={photo5} className="h-full w-full brightness-100"/>
       </div>
       <div className="relative z-10 flex flex-col items-center justify-center h-screen text-white text-center px-4 space-y-12 mt-12">
         <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">
@@ -23,15 +24,15 @@ function Hero() {
           Share your requirements & we’ll find the right service provider for
           your project
         </p>
-        <button className="p-3 md:p-4 w-[150px] md:w-[200px] bg-blue-300 text-black text-xl font-semibold space-x-2 hover:bg-blue-400 hover:text-white duration-300 rounded-md cursor-pointer">
+        <button className="p-2 md:p-4 w-[150px] md:w-[200px] bg-blue-300 text-black text-xl font-semibold space-x-2 hover:bg-blue-400 hover:text-white duration-300 rounded-md cursor-pointer">
           Get Started
         </button>
         <div className="w-full space-y-2">
           <h1>BROWSE OUR SERVICE CATEGORIES</h1>
           <hr className="text-color border-t w-full" />
         </div>
-        <marquee>
-          <div className="flex space-x-4 w-full">
+        
+          <div className="flex space-x-4 w-full justify-center items-center">
             <h1 className="rounded-full w-[200px] p-2 bg-transparent gap-3 border flex text-center h-[45px] cursor-pointer">
               <FaGears className="mt-1 w-4 h-4" />
               Software Developer
@@ -53,7 +54,7 @@ function Hero() {
               Socia Marketing
             </h1>
           </div>
-        </marquee>
+        
         
       </div>
     </div>
