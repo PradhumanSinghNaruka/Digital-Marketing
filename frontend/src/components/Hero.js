@@ -32,23 +32,23 @@ function Hero() {
         </div>
         <marquee>
           <div className="flex space-x-4 w-full">
-            <h1 className="rounded-full w-[200px] p-2 bg-transparent bg-white gap-3 border flex text-center h-[45px] cursor-pointer">
+            <h1 className="rounded-full w-[200px] p-2 bg-transparent gap-3 border flex text-center h-[45px] cursor-pointer">
               <FaGears className="mt-1 w-4 h-4" />
               Software Developer
             </h1>
-            <h1 className="rounded-full w-[200px] p-2 bg-transparent bg-white gap-3 border flex text-center h-[45px] cursor-pointer">
+            <h1 className="rounded-full w-[200px] p-2 bg-transparent gap-3 border flex text-center h-[45px] cursor-pointer">
               <FaLaptopCode className="mt-1 w-4 h-4" />
               Website Developer
             </h1>
-            <h1 className="rounded-full w-[160px] p-2 bg-transparent bg-white gap-3 border flex text-center h-[45px] cursor-pointer">
+            <h1 className="rounded-full w-[160px] p-2 bg-transparent gap-3 border flex text-center h-[45px] cursor-pointer">
               <VscGraph className="mt-1 w-4 h-4" />
               Marketing
             </h1>
-            <h1 className="rounded-full w-[250px] p-2 bg-transparent bg-white gap-3 border flex text-center h-[45px] cursor-pointer">
+            <h1 className="rounded-full w-[250px] p-2 bg-transparent gap-3 border flex text-center h-[45px] cursor-pointer">
               <FaSearchDollar className="mt-1 w-4 h-4" />
               Search Engine Optimization
             </h1>
-            <h1 className="rounded-full w-[200px] p-2 bg-transparent bg-white gap-3 border flex text-center h-[45px] cursor pointer">
+            <h1 className="rounded-full w-[200px] p-2 bg-transparent gap-3 border flex text-center h-[45px] cursor pointer">
               <FaShareAlt  className="mt-1 w-4 h-4" />
               Socia Marketing
             </h1>

@@ -33,16 +33,15 @@ import React from "react";
 import photo from "../image/logo4.png";
 import { MdEmail } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
-import ScrollLink from "react-scrolllock";
 
 function Navbar({ cartItemCount }) {
   const navItems = [
     { id: 1, text: "ABOUT", path: "" },
     { id: 2, text: "SERVICE", path: "" },
     { id: 3, text: "WORK", path: "" },
-    { id: 4, text: "CAREERS", path: ""},
+    { id: 4, text: "CAREERS", path: "" },
     { id: 5, text: "CONTACT", path: "" },
-    { id:6, text: "BLOG", path:""}
+    { id: 6, text: "BLOG", path: "" },
   ];
 
   return (
@@ -63,30 +62,14 @@ function Navbar({ cartItemCount }) {
                   key={id}
                   className="hover:scale-105 text-black font-semibold duration-300 cursor-pointer"
                 >
-                  {scroll ? (
-                    <ScrollLink
-                      to={text}
-                      smooth={true}
-                      duration={500}
-                      offset={-70}
-                      activeClass="active"
-                      spy={true}
-                      className="text-black"
-                    >
-                      {text}
-                    </ScrollLink>
-                  ) : (
-                    <span className="text-black hover:text-blue-500 hover:scale-105">
-                      {text}
-                    </span>
-                  )}
+                  <span className="text-black hover:text-blue-500 hover:scale-105">
+                    {text}
+                  </span>
                 </li>
               ))}
             </ul>
           </div>
-          <div
-            className="text-black cursor-pointer mt-2 ml-2 flex space-x-16 sm:space-x-2 md:space-x-6 lg:space-x-16"
-          >
+          <div className="text-black cursor-pointer mt-2 ml-2 flex space-x-16 sm:space-x-2 md:space-x-6 lg:space-x-16">
             <div className="">
               <FaPhoneAlt
                 className="hover:scale-125 hover:text-blue-500 duration-300"
@@ -96,9 +79,7 @@ function Navbar({ cartItemCount }) {
               />
             </div>
             <div className="relative">
-              <MdEmail
-                className="hover:scale-125 duration-300 text-black hover:text-blue-500 text-xl"
-              />
+              <MdEmail className="hover:scale-125 duration-300 text-black hover:text-blue-500 text-xl" />
               {cartItemCount > 0 && (
                 <span className="absolute -top-2 -right-2 bg-red-600 text-white text-xs w-4 h-4 flex items-center justify-center rounded-full">
                   {cartItemCount}
