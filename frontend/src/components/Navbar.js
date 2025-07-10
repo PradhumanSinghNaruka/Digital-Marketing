@@ -1,0 +1,115 @@
+// import React from "react";
+// import photo from "../image/logo4.png";
+// import { MdEmail } from "react-icons/md";
+// import { FaPhoneAlt } from "react-icons/fa";
+
+// function Navbar() {
+//   return (
+//     <div className="w-full h-28 flex justify-center items-center shadow-md shadow-blue-100">
+//       <div className="w-[20%] justify-center items-center">
+//         <img src={photo} className="w-48 h-48 mt-8 ml-6 cursor-pointer" />
+//       </div>
+//       <div className="w-[60%] justify-center items-center flex">
+//         <ul className="space-x-16 font-semibold py-12 text-lg mt-8 flex">
+//           <li className="cursor-pointer hover:text-blue-500 hover:scale-105 duration-300">ABOUT</li>
+//           <li className="cursor-pointer hover:text-blue-500 hover:scale-105 duration-300">SERVICE</li>
+//           <li className="cursor-pointer hover:text-blue-500 hover:scale-105 duration-300">WORK</li>
+//           <li className="cursor-pointer hover:text-blue-500 hover:scale-105 duration-300">CAREERS</li>
+//           <li className="cursor-pointer hover:text-blue-500 hover:scale-105 duration-300">CONTACT US</li>
+//           <li className="cursor-pointer hover:text-blue-500 hover:scale-105 duration-300">BLOG</li>
+//         </ul>
+//       </div>
+//       <div className="w-[20%] space-x-6 md:space-x-12 flex justify-center items-center mt-8">
+//         <MdEmail className="w-5 h-5 cursor-pointer hover:text-blue-500 hover:scale-105 duration-300" />
+//         <FaPhoneAlt className="w-5 h-5 cursor-pointer hover:text-blue-500 hover:scale-105 duration-300" />
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default Navbar;
+
+import React from "react";
+import photo from "../image/logo4.png";
+import { MdEmail } from "react-icons/md";
+import { FaPhoneAlt } from "react-icons/fa";
+import ScrollLink from "react-scrolllock";
+
+function Navbar({ cartItemCount }) {
+  const navItems = [
+    { id: 1, text: "ABOUT", path: "" },
+    { id: 2, text: "SERVICE", path: "" },
+    { id: 3, text: "WORK", path: "" },
+    { id: 4, text: "CAREERS", path: ""},
+    { id: 5, text: "CONTACT", path: "" },
+    { id:6, text: "BLOG", path:""}
+  ];
+
+  return (
+    <>
+      <div className="w-full px-4 sm:px-8 md:px-12 lg:px-12 h-20 shadow-md shadow-blue-100 fixed top-0 left-0 right-0 z-50 bg-white text-black">
+        <div className="max-w-screen-xl mx-auto flex justify-between items-center h-20 text-black">
+          <div className="flex">
+            <img
+              src={photo}
+              className="h-48 w-48 sm:h-6 sm:w-16 md:h-32 md:w-32 lg:h-48 lg:w-48 cursor-pointer"
+              alt="searchenix"
+            />
+          </div>
+          <div className="flex">
+            <ul className="hidden md:flex md:space-x-6 lg:space-x-12 font-thin md:text-sm lg:text-lg text-black hover:text-blue-400">
+              {navItems.map(({ id, text, path, scroll }) => (
+                <li
+                  key={id}
+                  className="hover:scale-105 text-black font-semibold duration-300 cursor-pointer"
+                >
+                  {scroll ? (
+                    <ScrollLink
+                      to={text}
+                      smooth={true}
+                      duration={500}
+                      offset={-70}
+                      activeClass="active"
+                      spy={true}
+                      className="text-black"
+                    >
+                      {text}
+                    </ScrollLink>
+                  ) : (
+                    <span className="text-black hover:text-blue-500 hover:scale-105">
+                      {text}
+                    </span>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div
+            className="text-black cursor-pointer mt-2 ml-2 flex space-x-16 sm:space-x-2 md:space-x-6 lg:space-x-16"
+          >
+            <div className="">
+              <FaPhoneAlt
+                className="hover:scale-125 hover:text-blue-500 duration-300"
+                onClick={() =>
+                  document.getElementById("my_modal_1").showModal()
+                }
+              />
+            </div>
+            <div className="relative">
+              <MdEmail
+                className="hover:scale-125 duration-300 text-black hover:text-blue-500 text-xl"
+              />
+              {cartItemCount > 0 && (
+                <span className="absolute -top-2 -right-2 bg-red-600 text-white text-xs w-4 h-4 flex items-center justify-center rounded-full">
+                  {cartItemCount}
+                </span>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+
+export default Navbar;
