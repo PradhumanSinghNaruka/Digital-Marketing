@@ -76,14 +76,15 @@ function Product() {
     },
   ];
   return (
-    <div className="w-full bg-blue-100 text-black space-y-8">
+    <div className="w-full bg-white text-black space-y-8">
       <div className="max-w-screen-xl mx-auto">
         <div className="max-w-screen-xl justify-center items-center p-8">
-          <h1 className="text-blue-900 text-center text-3xl md:text-5xl font-bold">
-            View Verified Agencies by Service Categories
+          <h1 className="text-center text-3xl md:text-5xl font-bold">
+            <span className="text-black">View Verified Agencies by </span>
+            <span className="text-blue-800"> Service Categories</span>
           </h1>
         </div>
-        <div className="grid md:grid-cols-3 gap-4 bg-blue-100 text-black mt-12">
+        <div className="grid md:grid-cols-3 gap-4 bg-white text-black mt-12">
           {items.map((item) => {
             return (
               <div

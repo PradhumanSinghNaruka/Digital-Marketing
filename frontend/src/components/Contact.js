@@ -7,7 +7,8 @@ function Contact() {
         <div className="justify-center items-center text-center mt-8 space-y-4">
           <div className="grid justify-center items-center text-center">
             <h1 className="font-bold text-blue-800 text-5xl p-4 mb-4">
-              Get In Touch
+              <span className="text-blue-800">Get In </span>
+              <span className="text-black"> Touch</span>
             </h1>
             <div className="flex space-x-8 mt-4">
               <div className="grid">

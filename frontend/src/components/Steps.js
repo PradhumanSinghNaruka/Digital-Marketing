@@ -52,10 +52,10 @@ function Steps() {
           </p>
           <h1 className="text-2xl font-bold md:text-4xl lg:text-5xl text-balance text-center">
             <span className="text-black">We Create </span>
-            <span className="text-blue-500 mb-2">
-              Extraordinary Digital Solutions.
+            <span className="text-blue-800 mb-2">
+              Extraordinary 
             </span>
-            
+            <span className="text-black mb-2"> Digital Solutions.</span>
           </h1>
         </div>
         <div className="grid md:grid-cols-4 mt-10 md:mt-16 px-6 gap-4">

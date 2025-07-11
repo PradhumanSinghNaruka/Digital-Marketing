@@ -53,10 +53,10 @@ function Questions() {
     <>
       <div
         name="Home"
-        className="w-full px-4 md:px-20 text-black mb-12 md:mb-2 md:mt-12 bg-blue-100"
+        className="w-full px-4 md:px-20 text-black mb-12 md:mb-2 md:mt-12 bg-white"
       >
         <div className="max-w-screen-2xl mx-auto grid w-full p-8">
-          <h1 className="text-center text-5xl text-blue-800 font-bold">Frequently Questions</h1>
+          <h1 className="text-center text-5xl text-blue-800 font-bold"><span className="text-blue-800">Frequently</span> <span className="text-black"> Questions</span></h1>
           <div className="md:w-full mt-12 order-2 space-y-3 mb-8">
             {faqs.map((faq, index) => (
               <div key={index} className="mb-4 border-b pb-4 space-y-4 border rounded-xl p-6 shadow-sm bg-white">
