@@ -58,7 +58,7 @@ function Steps() {
             
           </h1>
         </div>
-        <div className="grid md:grid-cols-4 mt-10 md:mt-16 px-6">
+        <div className="grid md:grid-cols-4 mt-10 md:mt-16 px-6 gap-4">
           {steps.map((item) => {
             return (
               <div
@@ -71,7 +71,7 @@ function Steps() {
                 <h3 className="text-2xl font-bold text-black mb-4">
                   {item.title}
                 </h3>
-                <h3 className="text-xl text-gray-600 mb-2">
+                <h3 className="text-md text-gray-600 mb-2">
                   {item.description}
                 </h3>
               </div>

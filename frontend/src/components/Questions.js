@@ -57,7 +57,7 @@ function Questions() {
       >
         <div className="max-w-screen-2xl mx-auto grid w-full p-8">
           <h1 className="text-center text-5xl text-blue-800 font-bold">Frequently Questions</h1>
-          <div className="md:w-full mt-12 order-2 space-y-3">
+          <div className="md:w-full mt-12 order-2 space-y-3 mb-8">
             {faqs.map((faq, index) => (
               <div key={index} className="mb-4 border-b pb-4 space-y-4 border rounded-xl p-6 shadow-sm bg-white">
                 <button

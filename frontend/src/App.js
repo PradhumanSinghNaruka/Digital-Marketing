@@ -6,6 +6,7 @@ import Product from './components/Product';
 import Why from './components/Why';
 import Contact from './components/Contact';
 import Questions from './components/Questions';
+import Compare from './components/Compare';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Product />
         <Contact />
         <Questions />
+        <Compare/>
       </div>
     </>
   )
