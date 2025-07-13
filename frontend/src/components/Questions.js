@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-
 function Questions() {
   const faqs = [
     {
@@ -42,7 +41,7 @@ function Questions() {
       question: "What is B2B bussiness?",
       answer:
         "B2C marketing uses social media, email campaigns, and influencer marketing to drive sales.",
-    }
+    },
   ];
   const [openIndex, setOpenIndex] = useState(null);
 
@@ -53,24 +52,51 @@ function Questions() {
     <>
       <div
         name="Home"
-        className="w-full px-4 md:px-20 text-black mb-12 md:mb-2 md:mt-12 bg-white"
+        className="w-full px-4 md:px-20 py-12 bg-gradient-to-b from-white to-blue-50"
       >
-        <div className="max-w-screen-2xl mx-auto grid w-full p-8">
-          <h1 className="text-center text-5xl text-blue-800 font-bold"><span className="text-blue-800">Frequently</span> <span className="text-black"> Questions</span></h1>
-          <div className="md:w-full mt-12 order-2 space-y-3 mb-8">
+        <div className="max-w-screen-xl mx-auto">
+          <h1 className="text-center text-3xl md:text-5xl font-bold mb-12">
+            <span className="text-blue-400">Frequently</span>{" "}
+            <span className="text-black">Questions</span>
+          </h1>
+
+          <div className="space-y-6">
             {faqs.map((faq, index) => (
-              <div key={index} className="mb-4 border-b pb-4 space-y-4 border rounded-xl p-6 shadow-sm bg-white">
+              <div
+                key={index}
+                className="border border-blue-200 rounded-xl p-6 shadow-md bg-white transition-all duration-300"
+              >
                 <button
                   onClick={() => toggleFAQ(index)}
-                  className="text-left w-full text-xl md:text-2xl font-medium text-black hover:underline hover:text-blue-500 duration-300"
+                  className="flex justify-between items-center w-full text-left text-lg md:text-2xl font-semibold text-black"
                 >
-                  {faq.question}
+                  <span>{faq.question}</span>
+                  <svg
+                    className={`w-6 h-6 transform transition-transform duration-300 ${
+                      openIndex === index ? "rotate-180" : ""
+                    }`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
                 </button>
-                {openIndex === index && (
-                  <p className="mt-2 text-gray-700 text-sm md:text-xl">
+
+                <div
+                  className={`overflow-hidden transition-all duration-500 ${
+                    openIndex === index ? "max-h-96 mt-4" : "max-h-0"
+                  }`}
+                >
+                  <p className="text-gray-700 text-sm md:text-lg">
                     {faq.answer}
                   </p>
-                )}
+                </div>
               </div>
             ))}
           </div>

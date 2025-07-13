@@ -11,7 +11,7 @@ function Product() {
     {
       id: 1,
       title: "Branding & Creative",
-      image: <IoBulbOutline className="w-12 h-12 text-blue-700" />,
+      image: <IoBulbOutline className="w-12 h-12 text-blue-500" />,
       text1: "Branding & Creative",
       text2: "Digital Agencies",
       text3: "Creative Agencies",
@@ -22,92 +22,100 @@ function Product() {
     {
       id: 2,
       title: "Website & Interface",
-      image: <CgWebsite className="w-12 h-12 text-blue-700" />,
+      image: <CgWebsite className="w-12 h-12 text-blue-500" />,
       text1: "Web Design Companies",
       text2: " eCommerce Development Companies",
       text3: "Web Development Companies",
-      text4:"WordPress Web Design Companies",
-      text5:"WordPress Development Companies",
-      text6:"Magento Development Companies"
+      text4: "WordPress Web Design Companies",
+      text5: "WordPress Development Companies",
+      text6: "Magento Development Companies",
     },
     {
       id: 3,
       title: "Marketing",
-      image: <FaDollarSign className="w-12 h-12 text-blue-700" />,
+      image: <FaDollarSign className="w-12 h-12 text-blue-500" />,
       text1: "Web Design Companies",
       text2: " eCommerce Development Companies",
       text3: "Web Development Companies",
-      text4:"WordPress Web Design Companies",
-      text5:"WordPress Development Companies",
-      text6:"Magento Development Companies"
+      text4: "WordPress Web Design Companies",
+      text5: "WordPress Development Companies",
+      text6: "Magento Development Companies",
     },
     {
       id: 4,
       title: "Software & App",
-      image: <FaLaptopCode className="w-12 h-12 text-blue-700" />,
+      image: <FaLaptopCode className="w-12 h-12 text-blue-500" />,
       text1: "Web Design Companies",
       text2: " eCommerce Development Companies",
       text3: "Web Development Companies",
-      text4:"WordPress Web Design Companies",
-      text5:"WordPress Development Companies",
-      text6:"Magento Development Companies"
+      text4: "WordPress Web Design Companies",
+      text5: "WordPress Development Companies",
+      text6: "Magento Development Companies",
     },
     {
       id: 5,
       title: "IT Services",
-      image: <MdOutlineVideoSettings className="w-12 h-12 text-blue-700" />,
+      image: <MdOutlineVideoSettings className="w-12 h-12 text-blue-500" />,
       text1: "Web Design Companies",
       text2: " eCommerce Development Companies",
       text3: "Web Development Companies",
-      text4:"WordPress Web Design Companies",
-      text5:"WordPress Development Companies",
-      text6:"Magento Development Companies"
+      text4: "WordPress Web Design Companies",
+      text5: "WordPress Development Companies",
+      text6: "Magento Development Companies",
     },
     {
       id: 6,
       title: "Bussiness Services",
-      image: <LuHandshake className="w-12 h-12 text-blue-700" />,
+      image: <LuHandshake className="w-12 h-12 text-blue-500" />,
       text1: "Bussiness Conslting Firms",
       text2: "Market Research Companies",
       text3: "Call Center Companies",
-      text4:"WordPress Web Design Companies",
-      text5:"WordPress Development Companies",
-      text6:"Magento Development Companies"
+      text4: "WordPress Web Design Companies",
+      text5: "WordPress Development Companies",
+      text6: "Magento Development Companies",
     },
   ];
   return (
-    <div className="w-full bg-white text-black space-y-8">
-      <div className="max-w-screen-xl mx-auto">
-        <div className="max-w-screen-xl justify-center items-center p-8">
-          <h1 className="text-center text-3xl md:text-5xl font-bold">
-            <span className="text-black">View Verified Agencies by </span>
-            <span className="text-blue-800"> Service Categories</span>
+    <div className="w-full relative overflow-hidden bg-white text-black py-16 md:py-24">
+      <div className="relative max-w-screen-xl mx-auto px-4 sm:px-6 md:px-8">
+        <div className="text-center mb-12">
+          <h1 className="text-3xl md:text-5xl font-bold text-black">
+            <span>View Verified Agencies by </span>
+            <span className="text-blue-400">Service Categories</span>
           </h1>
         </div>
-        <div className="grid md:grid-cols-3 gap-4 bg-white text-black mt-12">
-          {items.map((item) => {
-            return (
-              <div
-                className="text-center border rounded-xl gap-4 p-6 bg-white mb-12 shadow-xl"
-                key={item.id}
-              >
-                <div className="mx-auto flex gap-4">
-                  <h1 className="text-2xl text-blue-700">{item.title}</h1>
-                  <span className="justify-end items-end text-end">
-                    {item.image}
-                  </span>
-                </div>
-                <div className="grid space-y-2 text-start text-semibold text-xl">
-                  <h1 className="text-black hover:text-blue-500 duration-300 hover:scale-105 cursor-pointer">{item.text1}</h1>
-                  <h1 className="text-black hover:text-blue-500 duration-300 hover:scale-105 cursor-pointer">{item.text2}</h1>
-                  <h1 className="text-black hover:text-blue-500 duration-300 hover:scale-105 cursor-pointer">{item.text3}</h1>
-                  <h1 className="text-black hover:text-blue-500 duration-300 hover:scale-105 cursor-pointer">{item.text4}</h1>
-                  <h1 className="text-black hover:text-blue-500 duration-300 hover:scale-105 cursor-pointer">{item.text5}</h1>
-                  <h1 className="text-black hover:text-blue-500 duration-300 hover:scale-105 cursor-pointer">{item.text6}</h1>
-                </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {items.map((item) => (
+            <div
+              key={item.id}
+              className="bg-white rounded-2xl shadow-lg p-6"
+            >
+              <div className="flex items-center justify-between mb-4">
+                <h2 className="text-xl md:text-2xl font-bold text-blue-500">
+                  {item.title}
+                </h2>
+                <span className="w-10 h-10">{item.image}</span>
               </div>
-            );
-          })}
+
+              <div className="space-y-2">
+                {[
+                  item.text1,
+                  item.text2,
+                  item.text3,
+                  item.text4,
+                  item.text5,
+                  item.text6,
+                ].map((text, idx) => (
+                  <p
+                    key={idx}
+                    className="text-base md:text-lg text-black font-medium hover:text-blue-400 hover:scale-105 cursor-pointer transition-colors duration-500"
+                  >
+                    {text}
+                  </p>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>

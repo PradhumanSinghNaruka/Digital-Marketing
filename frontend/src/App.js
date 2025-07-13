@@ -7,6 +7,7 @@ import Why from './components/Why';
 import Contact from './components/Contact';
 import Questions from './components/Questions';
 import Compare from './components/Compare';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Contact />
         <Questions />
         <Compare/>
+        <Footer/>
       </div>
     </>
   )
