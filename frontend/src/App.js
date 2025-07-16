@@ -1,30 +1,29 @@
-import React from 'react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Steps from './components/Steps';
-import Product from './components/Product';
-import Why from './components/Why';
-import Contact from './components/Contact';
-import Questions from './components/Questions';
-import Compare from './components/Compare';
-import Footer from './components/Footer';
+import React from "react";
+import Home from "./pages/Home";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import About from "./pages/About";
+import Service from "./pages/Service";
+import Contactus from "./pages/Contactus";
+import Blog from "./pages/Blog";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <>
-      <div>
+      <Router>
         <Navbar />
-        <Hero />
-        <Steps />
-        <Why />
-        <Product />
-        <Contact />
-        <Questions />
-        <Compare/>
-        <Footer/>
-      </div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/service" element={<Service />} />
+          <Route path="/contactus" element={<Contactus />} />
+          <Route path="/blog" element={<Blog />} />
+        </Routes>
+        <Footer />
+      </Router>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

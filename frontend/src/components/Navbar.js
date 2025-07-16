@@ -68,34 +68,34 @@ import photo from "../image/logo4.png";
 import { MdEmail } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
 import { HiMenu, HiX } from "react-icons/hi";
+import {useNavigate} from "react-router-dom";
 
 function Navbar({ cartItemCount }) {
   const [navOpen, setNavOpen] = useState(false);
-
+  const navigate = useNavigate();
   const navItems = [
-    { id: 1, text: "ABOUT", path: "" },
-    { id: 2, text: "SERVICE", path: "" },
-    { id: 3, text: "WORK", path: "" },
+    { id: 1, text: "ABOUT", path: "/about"},
+    { id: 2, text: "SERVICE", path: "/service" },
     { id: 4, text: "CAREERS", path: "" },
-    { id: 5, text: "CONTACT", path: "" },
-    { id: 6, text: "BLOG", path: "" },
+    { id: 5, text: "CONTACT", path: "/contactus" },
+    { id: 6, text: "BLOG", path: "blog" },
   ];
 
   return (
     <div className="w-full fixed top-0 left-0 z-50 bg-white shadow-md">
       <div className="max-w-screen-xl mx-auto flex justify-between items-center px-4 sm:px-6 md:px-8 h-20">
         <img
-          src={photo}
+          src=""
           alt="Searchnix"
           className="h-36 sm:h-36 md:h-32 lg:h-36 cursor-pointer"
         />
         <ul className="hidden md:flex space-x-6 lg:space-x-12 font-semibold text-black">
-          {navItems.map(({ id, text }) => (
+          {navItems.map(({ id, text, path }) => (
             <li
               key={id}
               className="hover:text-blue-500 cursor-pointer hover:scale-105 duration-200"
             >
-              {text}
+              <span onClick={() => navigate(path)}>{text}</span>
             </li>
           ))}
         </ul>
