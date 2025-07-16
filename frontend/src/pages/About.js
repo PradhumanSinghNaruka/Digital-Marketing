@@ -4,94 +4,82 @@ import photo2 from "../image/about2.jpg";
 
 function About() {
   return (
-    <div className="w-full h-screen">
-      <h1 className="bg-gradient-to-b to-white from-blue-300 p-12 text-center w-full text-2xl text-black font-bold">
+    <div className="w-full mt-14">
+      <h1 className="bg-gradient-to-b from-blue-300 to-white py-12 text-center w-full text-3xl md:text-4xl lg:text-5xl text-black font-bold">
         About Us
       </h1>
-      <div className="space-y-14 w-full">
-        <div className="max-w-screen-2xl max-auto px-6 grid md:flex w-full gap-4 mt-4">
-          <div className="w-full md:w-1/2 order-1">
-            <img src={photo1} className="w-full h-[450px] border rounded-2xl" />
-          </div>
-          <div className="w-full md:w-1/2 order-2 space-y-10 mt-4">
-            <h1 className="text-3xl sm:text-xl md:text-3xl lg:text-4xl">
-              A team of professionals, passionate about new technologies &
-              progress
-            </h1>
-            <p className="text-gray-600 text-sm sm:text-md md:text-lg lg:text-xl">
-              Quisque nec quam convallis, scelerisque risus in, viverra ipsum.
-              Mauris sed molestie magna. Nunc auctor aliquet tortor in
-              venenatis. Suspendisse potenti. Etiam quis suscipit nulla. Cras at
-              facilisis risus, nec accumsan urna. Praesent congue aliquet nisi,
-              lorem eu hendrerit sem lobortis nec.
-            </p>
-            <div className="flex justify-center items-center w-full">
-              <h1 className="w-1/2 grid">
-                <p className="text-md md:text-xl lg:text-2xl text-blue-600">
-                  est. 2024
-                </p>{" "}
-                <p className="text-md md:text-lg lg:text-xl">
-                  A decade of expertise
-                </p>
-              </h1>
-              <h1 className="w-1/2 grid">
-                <p className="text-md md:text-xl lg:text-2xl text-blue-600">
-                  100 %
-                </p>{" "}
-                <p className="text-md md:text-lg lg:text-xl">
-                  satisfied Customer
-                </p>
-              </h1>
-            </div>
-          </div>
+      <div className="max-w-screen-2xl mx-auto px-6 py-12 grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <img
+            src={photo1}
+            alt="About"
+            className="w-full h-[350px] md:h-[450px] object-cover rounded-2xl shadow"
+          />
         </div>
-        <div className="max-w-screen-2xl max-auto px-6 grid md:flex w-full gap-4 mt-4">
-          <div className="w-full md:w-1/2 order-1 space-y-10 mt-4">
-            <h1 className="text-3xl sm:text-xl md:text-3xl lg:text-4xl">
-              A team of professionals, passionate about new technologies &
-              progress
-            </h1>
-            <p className="text-gray-600 text-sm sm:text-md md:text-lg lg:text-xl">
-              Quisque nec quam convallis, scelerisque risus in, viverra ipsum.
-              Mauris sed molestie magna. Nunc auctor aliquet tortor in
-              venenatis. Suspendisse potenti. Etiam quis suscipit nulla. Cras at
-              facilisis risus, nec accumsan urna. Praesent congue aliquet nisi,
-              lorem eu hendrerit sem lobortis nec.
-            </p>
-            <div className="flex justify-center items-center w-full">
-              <h1 className="w-1/2 grid">
-                <p className="text-md md:text-xl lg:text-2xl text-blue-600">
-                  est. 2024
-                </p>{" "}
-                <p className="text-md md:text-lg lg:text-xl">
-                  A decade of expertise
-                </p>
-              </h1>
-              <h1 className="w-1/2 grid">
-                <p className="text-md md:text-xl lg:text-2xl text-blue-600">
-                  100 %
-                </p>{" "}
-                <p className="text-md md:text-lg lg:text-xl">
-                  satisfied Customer
-                </p>
-              </h1>
+        <div className="space-y-6">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold">
+            A team of professionals, passionate about new technologies & progress
+          </h2>
+          <p className="text-gray-600 text-base md:text-lg leading-relaxed">
+            Quisque nec quam convallis, scelerisque risus in, viverra ipsum.
+            Mauris sed molestie magna. Nunc auctor aliquet tortor in venenatis.
+            Suspendisse potenti. Etiam quis suscipit nulla. Cras at facilisis
+            risus, nec accumsan urna. Praesent congue aliquet nisi, lorem eu
+            hendrerit sem lobortis nec.
+          </p>
+          <div className="flex flex-wrap justify-between">
+            <div>
+              <p className="text-xl md:text-2xl text-blue-600 font-bold">est. 2024</p>
+              <p className="text-base md:text-lg">A decade of expertise</p>
             </div>
-          </div>
-          <div className="w-full md:w-1/2 order-2">
-            <img src={photo2} className="w-full h-[450px] border rounded-2xl" />
+            <div>
+              <p className="text-xl md:text-2xl text-blue-600 font-bold">100%</p>
+              <p className="text-base md:text-lg">Satisfied Customers</p>
+            </div>
           </div>
         </div>
       </div>
-      <div className="w-full justify-center items-center bg-gradient-to-b to-blue-300 from-white p-6 mt-14">
-        <div className="max-w-screen-xl mx-auto grid items-center justify-between px-4 sm:px-6 md:px-8 lg:px-12 gap-10 sm:gap-8 md:gap-12 space-x-4 mb-2">
-          <h1 className="text-center font-bold text-black text-lg sm:text-md md:text-3xl lg:text-5xl">
+      <div className="max-w-screen-2xl mx-auto px-6 py-12 grid md:grid-cols-2 gap-8 items-center">
+        <div className="space-y-6 order-2 md:order-1">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold">
+            A team of professionals, passionate about new technologies & progress
+          </h2>
+          <p className="text-gray-600 text-base md:text-lg leading-relaxed">
+            Quisque nec quam convallis, scelerisque risus in, viverra ipsum.
+            Mauris sed molestie magna. Nunc auctor aliquet tortor in venenatis.
+            Suspendisse potenti. Etiam quis suscipit nulla. Cras at facilisis
+            risus, nec accumsan urna. Praesent congue aliquet nisi, lorem eu
+            hendrerit sem lobortis nec.
+          </p>
+          <div className="flex flex-wrap justify-between">
+            <div>
+              <p className="text-xl md:text-2xl text-blue-600 font-bold">est. 2024</p>
+              <p className="text-base md:text-lg">A decade of expertise</p>
+            </div>
+            <div>
+              <p className="text-xl md:text-2xl text-blue-600 font-bold">100%</p>
+              <p className="text-base md:text-lg">Satisfied Customers</p>
+            </div>
+          </div>
+        </div>
+        <div className="order-1 md:order-2">
+          <img
+            src={photo2}
+            alt="About"
+            className="w-full h-[350px] md:h-[450px] object-cover rounded-2xl shadow"
+          />
+        </div>
+      </div>
+      <div className="w-full bg-gradient-to-b from-white to-blue-300 py-12">
+        <div className="max-w-screen-xl mx-auto text-center px-6 space-y-6">
+          <h2 className="font-bold text-black text-2xl md:text-4xl lg:text-5xl">
             Join thousands of business owners & companies who trust The Seven!
-          </h1>
-          <div className="flex justify-center items-center gap-4 md:gap-8 lg:gap-14">
-            <button className="p-2 rounded-full w-full md:w-[250px] font-bold text-sm md:text-lg text-black bg-gradient-to-r to-white from-blue-500 hover:bg-gradient-to-l to-white from-blue-500 duration-300">
+          </h2>
+          <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8">
+            <button className="px-6 py-3 rounded-full font-bold text-sm md:text-lg text-black bg-gradient-to-r from-blue-500 to-white hover:from-white hover:to-blue-500 transition">
               Contact us
             </button>
-            <button className="p-2 rounded-full w-full md:w-[250px] font-bold text-sm md:text-lg text-black bg-gradient-to-r to-blue-500 from-white hover:bg-gradient-to-l to-blue-500 from-white duration-300">
+            <button className="px-6 py-3 rounded-full font-bold text-sm md:text-lg text-black bg-gradient-to-r from-white to-blue-500 hover:from-blue-500 hover:to-white transition">
               Request a call back
             </button>
           </div>

@@ -17,60 +17,59 @@ function Blog() {
     {
       id: 3,
       img: "",
-      heading: "Email marketing",
-      para: "Learn actionable steps to increase your followers, engagement, and conversions using Instagram marketing.",
+      heading: "Email Marketing",
+      para: "Craft powerful emails that increase open rates, engagement, and drive real conversions for your business.",
     },
     {
       id: 4,
       img: "",
       heading: "PPC Ads",
-      para: "Learn actionable steps to increase your followers, engagement, and conversions using Instagram marketing.",
+      para: "Maximize ROI with smart, cost-effective Pay-Per-Click advertising strategies.",
     },
     {
       id: 5,
       img: "",
       heading: "Web Development",
-      para: "Learn actionable steps to increase your followers, engagement, and conversions using Instagram marketing.",
+      para: "Build robust, modern websites with best practices in UI, UX, and SEO built-in.",
     },
   ];
+
   return (
-    <div className="w-full h-screen">
-      <h1 className="bg-gradient-to-b to-white from-blue-300 p-12 text-center w-full text-2xl text-black font-bold">
+    <div className="w-full mt-14">
+      <h1 className="bg-gradient-to-b from-blue-300 to-white py-12 text-center w-full text-3xl md:text-4xl lg:text-5xl text-black font-bold">
         Our Blog
       </h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="max-w-screen-2xl mx-auto px-6 py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         {items.map((item) => (
-          <div key={item.id} className="bg-white rounded-2xl shadow-lg p-6">
-            <div className="flex items-center justify-between mb-4">
-              <h2 className="text-xl md:text-2xl font-bold text-blue-500">
+          <div
+            key={item.id}
+            className="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300"
+          >
+            <div className="mb-4">
+              <h2 className="text-xl md:text-2xl font-bold text-blue-600 mb-2">
                 {item.heading}
               </h2>
-              <span className="w-10 h-10">{item.image}</span>
+              {item.img && (
+                <img src={item.img} alt={item.heading} className="w-16 h-16" />
+              )}
             </div>
 
-            <div className="space-y-2">
-              {[item.para].map((para, idx) => (
-                <p
-                  key={idx}
-                  className="text-base md:text-lg text-black font-medium cursor-pointer transition-colors duration-500"
-                >
-                  {para}
-                </p>
-              ))}
-            </div>
+            <p className="text-gray-700 text-base md:text-lg leading-relaxed">
+              {item.para}
+            </p>
           </div>
         ))}
       </div>
-      <div className="w-full justify-center items-center bg-gradient-to-b to-blue-300 from-white p-6 mt-14">
-        <div className="max-w-screen-xl mx-auto grid items-center justify-between px-4 sm:px-6 md:px-8 lg:px-12 gap-10 sm:gap-8 md:gap-12 space-x-4 mb-2">
-          <h1 className="text-center font-bold text-black text-lg sm:text-md md:text-3xl lg:text-5xl">
+      <div className="w-full bg-gradient-to-b from-white to-blue-100 py-12">
+        <div className="max-w-screen-xl mx-auto text-center px-6 space-y-6">
+          <h2 className="font-bold text-black text-2xl md:text-4xl lg:text-5xl">
             Join thousands of business owners & companies who trust The Seven!
-          </h1>
-          <div className="flex justify-center items-center gap-4 md:gap-8 lg:gap-14">
-            <button className="p-2 rounded-full w-full md:w-[250px] font-bold text-sm md:text-lg text-black bg-gradient-to-r to-white from-blue-500 hover:bg-gradient-to-l to-white from-blue-500 duration-300">
+          </h2>
+          <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8">
+            <button className="px-6 py-3 rounded-full font-bold text-sm md:text-lg text-black bg-gradient-to-r from-blue-500 to-white hover:from-white hover:to-blue-500 transition">
               Contact us
             </button>
-            <button className="p-2 rounded-full w-full md:w-[250px] font-bold text-sm md:text-lg text-black bg-gradient-to-r to-blue-500 from-white hover:bg-gradient-to-l to-blue-500 from-white duration-300">
+            <button className="px-6 py-3 rounded-full font-bold text-sm md:text-lg text-black bg-gradient-to-r from-white to-blue-500 hover:from-blue-500 hover:to-white transition">
               Request a call back
             </button>
           </div>
