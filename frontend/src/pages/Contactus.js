@@ -59,7 +59,7 @@ function Contactus() {
           </div>
         </form>
       </div>
-      <div className="w-full py-12 bg-gradient-to-b from-white to-blue-300">
+      <div className="w-full py-12 bg-gradient-to-b from-white to-blue-100">
         <div className="text-center space-y-6">
           <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold">
             Let&apos;s get social!

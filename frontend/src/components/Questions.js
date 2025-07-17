@@ -52,19 +52,22 @@ function Questions() {
     <>
       <div
         name="Home"
-        className="w-full px-4 md:px-20 py-12 bg-gradient-to-b from-white to-blue-50"
+        className="w-full px-4 md:px-20 py-12 bg-white"
       >
         <div className="max-w-screen-xl mx-auto">
+          <h1 className="text-center underline text-blue-800 text-md">FAQ's</h1>
           <h1 className="text-center text-3xl md:text-5xl font-bold mb-12">
-            <span className="text-blue-400">Frequently</span>{" "}
+            <span className="text-blue-700">Frequently</span>{" "}
             <span className="text-black">Questions</span>
           </h1>
-
-          <div className="space-y-6">
+          <p className="text-gray-500 text-center text-wrap">Elevate your brand’s digital footprint with our specially curated
+            Digital Growth Packages. Select the plan that aligns with your
+            ambitions and witness your brand thrive in the digital era.</p>
+          <div className="space-y-6 mt-6">
             {faqs.map((faq, index) => (
               <div
                 key={index}
-                className="border border-blue-200 rounded-xl p-6 shadow-md bg-white transition-all duration-300"
+                className="border border-blue-100 rounded-xl p-6 shadow-sm bg-white transition-all duration-300"
               >
                 <button
                   onClick={() => toggleFAQ(index)}

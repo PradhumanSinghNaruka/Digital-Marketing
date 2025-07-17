@@ -74,11 +74,12 @@ function Navbar({ cartItemCount }) {
   const [navOpen, setNavOpen] = useState(false);
   const navigate = useNavigate();
   const navItems = [
-    { id: 1, text: "ABOUT", path: "/about"},
-    { id: 2, text: "SERVICE", path: "/service" },
-    { id: 4, text: "CAREERS", path: "" },
-    { id: 5, text: "CONTACT", path: "/contactus" },
-    { id: 6, text: "BLOG", path: "blog" },
+    { id: 1, text: "HOME", path: "/"},
+    { id: 2, text: "ABOUT", path: "/about" },
+    { id: 4, text: "SERVICE", path: "/service" },
+    { id: 5, text: "CASE STUDY", path: "" },
+    { id: 6, text: "PAGES", path: "" },
+    { id: 7, text: "CONTACT", path: "/contact" },
   ];
 
   return (
@@ -98,34 +99,23 @@ function Navbar({ cartItemCount }) {
               <span onClick={() => navigate(path)}>{text}</span>
             </li>
           ))}
-        </ul>
-        <div className="flex items-center space-x-6">
-          <FaPhoneAlt className="text-black hover:text-blue-500 cursor-pointer hover:scale-110 duration-200" />
-          <div className="relative">
-            <MdEmail className="text-black hover:text-blue-500 cursor-pointer hover:scale-110 duration-200 text-xl" />
-            {cartItemCount > 0 && (
-              <span className="absolute -top-2 -right-2 bg-red-600 text-white text-xs w-4 h-4 flex items-center justify-center rounded-full">
-                {cartItemCount}
-              </span>
-            )}
-          </div>
+        </ul>          
           <div
             className="md:hidden cursor-pointer text-2xl text-black"
             onClick={() => setNavOpen(!navOpen)}
           >
             {navOpen ? <HiX /> : <HiMenu />}
           </div>
-        </div>
       </div>
       {navOpen && (
         <ul className="md:hidden bg-white px-6 py-4 space-y-4 shadow-lg">
-          {navItems.map(({ id, text }) => (
+          {navItems.map(({ id, text, path }) => (
             <li
               key={id}
               className="text-black font-semibold hover:text-blue-500 cursor-pointer border-b border-gray-200 pb-2"
               onClick={() => setNavOpen(false)}
             >
-              {text}
+              <span onClick={() => navigate((path))}>{text}</span>
             </li>
           ))}
         </ul>

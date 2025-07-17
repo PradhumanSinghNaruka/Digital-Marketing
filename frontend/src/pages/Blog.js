@@ -66,10 +66,10 @@ function Blog() {
             Join thousands of business owners & companies who trust The Seven!
           </h2>
           <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8">
-            <button className="px-6 py-3 rounded-full font-bold text-sm md:text-lg text-black bg-gradient-to-r from-blue-500 to-white hover:from-white hover:to-blue-500 transition">
+            <button className="px-6 py-3 rounded-full font-bold text-sm md:text-lg text-black bg-gradient-to-r from-blue-400 to-white hover:from-white hover:to-blue-400 transition">
               Contact us
             </button>
-            <button className="px-6 py-3 rounded-full font-bold text-sm md:text-lg text-black bg-gradient-to-r from-white to-blue-500 hover:from-blue-500 hover:to-white transition">
+            <button className="px-6 py-3 rounded-full font-bold text-sm md:text-lg text-black bg-gradient-to-r from-white to-blue-400 hover:from-blue-400 hover:to-white transition">
               Request a call back
             </button>
           </div>
