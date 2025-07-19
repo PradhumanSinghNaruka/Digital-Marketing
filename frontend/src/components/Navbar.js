@@ -86,17 +86,17 @@ function Navbar({ cartItemCount }) {
     <div className="w-full fixed top-0 left-0 z-50 bg-white shadow-md">
       <div className="max-w-screen-xl mx-auto flex justify-between items-center px-4 sm:px-6 md:px-8 h-20">
         <img
-          src=""
+          src={photo}
           alt="Searchnix"
-          className="h-36 sm:h-36 md:h-32 lg:h-36 cursor-pointer"
+          className="h-36 sm:h-36 md:h-32 lg:h-40 cursor-pointer"
         />
         <ul className="hidden md:flex space-x-6 lg:space-x-12 font-semibold text-black">
           {navItems.map(({ id, text, path }) => (
             <li
               key={id}
-              className="hover:text-blue-500 cursor-pointer hover:scale-105 duration-200"
+              className="hover:text-blue-800 cursor-pointer hover:scale-105 duration-200"
             >
-              <span onClick={() => navigate(path)}>{text}</span>
+              <span onClick={() => navigate(path)} className="text-lg">{text}</span>
             </li>
           ))}
         </ul>          

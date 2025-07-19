@@ -33,20 +33,20 @@ function Data() {
   ];
   return (
     <div className="w-full bg-white text-black">
-      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-7">
+      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 md:px-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-5">
           {steps.map((item) => (
             <div
               key={item.id}
-              className="border border-blue-200 bg-white rounded-md shadow-lg cursor-pointer p-5 space-y-2"
+              className="border border-blue-200 bg-white rounded-xl shadow-lg cursor-pointer p-4 space-y-6"
             >
-              <h3 className="text-lg md:text-xl font-bold text-black mb-2">
+              <h3 className="text-xl md:text-2xl font-bold text-black mb-2">
                 {item.title}
               </h3>
               <p className="text-sm md:text-md text-gray-600">
                 {item.description}
               </p>
-              <h2 className="text-sm md:text-3xl lg:text-4xl text-blue-700 font-semibold">
+              <h2 className="text-2xl md:text-4xl lg:text-5xl text-blue-700 font-semibold">
                 {item.number}
               </h2>
             </div>

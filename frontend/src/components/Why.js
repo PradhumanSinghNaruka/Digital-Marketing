@@ -101,56 +101,63 @@ function Why() {
       image: "01",
       title: "Beauty Live Selling",
       description:
-        "Our tech gurus dont't speak in code, they speak in solutions that'll make you go whoa",
+        "We produced a series of product photos and videos for Connect, a women’s fashion brand. The new media content led to a 25% increase in social media engagement.",
     },
     {
       id: 2,
       image: "02",
       title: "Kid Fashion E-commerce",
       description:
-        "Our strategists don't just think outside the box, they redefine the entire playing field",
+        "We produced a series of product photos and videos for Connect, a women’s fashion brand. The new media content led to a 25% increase in social media engagement.",
     },
     {
       id: 3,
       image: "03",
-      title: "Women Fashion E-commerce",
+      title: "Women’s Fashion Lookbook",
       description:
-        "Our designers don't just create pixels, they weave magic that'll make your brand sparkle!",
+        "We produced a series of product photos and videos for Connect, a women’s fashion brand. The new media content led to a 25% increase in social media engagement.",
     },
   ];
   return (
-    <div className="w-full bg-white text-black py-12 md:py-20">
-      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
-        <div className="max-w-screen-md mx-auto text-center space-y-6 md:space-y-8">
-          <p className="text-base md:text-lg font-semibold uppercase tracking-wider text-blue-700 underline">
-            CASE STUDIES
-          </p>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-balance">
-            <span className="text-gray-700">Crafting </span>
-            <span className="text-blue-700"> Digital Experiences</span>
-          </h1>
-          <p className="text-gray-500 text-xl">
-            We are passionate about crafting unique digital experiences that
-            resonate with audiences. Our tailored strategies have driven
-            significant results for our clients, propelling their growth in the
-            digital space.
-          </p>
+    <div className="w-full bg-white text-black py-12 md:py-20 mt-12 md:mt-16">
+      <div className="max-w-screen-xl mx-auto px-4">
+        <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-8">
+          <div className="md:w-1/2 flex flex-col items-start text-start space-y-4">
+            <p className="text-base md:text-lg font-semibold uppercase tracking-wider text-blue-500">
+              CASE STUDIES
+            </p>
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold w-full">
+              <span className="text-gray-500">Crafting Digital </span>
+              <span className="text-blue-700">Experiences</span>
+            </h1>
+          </div>
+          <div className="md:w-1/2 flex flex-col items-start text-start">
+            <p className="text-gray-500 text-md md:text-lg w-full text-wrap">
+              We are passionate about crafting unique digital experiences that
+              resonate with audiences. Our tailored strategies have driven
+              significant results for our clients, propelling their growth in
+              the digital space.
+            </p>
+          </div>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-10 mt-12">
+        <div className="flex flex-col divide-y divide-gray-200 mt-16 md:mt-24">
           {steps.map((item) => (
             <div
               key={item.id}
-              className="text-center border border-blue-100 bg-white rounded-2xl shadow-lg cursor-pointer p-3 space-y-1 md:space-y-6"
+              className="flex flex-col md:flex-row md:items-center justify-between py-6 gap-4"
             >
-              <h1 className="mx-auto mb-4 border border-gray-600 bg-blue-100 text-blue-700 rounded-full w-14 p-3 text-xl">
-                {item.image}
-              </h1>
-              <h3 className="text-xl md:text-2xl font-bold text-black mb-2">
-                {item.title}
-              </h3>
-              <p className="text-sm md:text-base text-gray-600">
-                {item.description}
-              </p>
+              <div className="flex items-start md:items-center gap-6 flex-1">
+                <div className="flex items-center justify-center w-16 h-16 rounded-full bg-blue-100 text-blue-700 font-bold text-lg">
+                  {item.id.toString().padStart(2, "0")}
+                </div>
+                <div className="space-y-2">
+                  <h3 className="text-2xl font-bold text-black">{item.title}</h3>
+                  <p className="text-gray-500 text-base text-balance">{item.description}</p>
+                </div>
+              </div>
+              <button className="bg-blue-600 hover:bg-blue-700 text-white p-4 px-3 rounded-full text-sm font-semibold transition">
+                Read Detail
+              </button>
             </div>
           ))}
         </div>

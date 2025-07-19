@@ -74,23 +74,24 @@
 import React from "react";
 import photo1 from "../image/about1.jpg";
 import photo2 from "../image/about2.jpg";
-import { FaRegEye } from "react-icons/fa";
-import { GiBrokenRibbon } from "react-icons/gi";
+import photo3 from "../image/vision.png";
+import photo4 from "../image/mission.png";
 
 function Steps() {
   return (
     <div className="w-full mt-14 flex h-full">
       <div className="w-1/2 max-w-screen-2xl mx-auto px-6 py-12 grid gap-8 items-center">
-        <div className="space-y-6 md:space-y-10">
-          <h1 className="underline text-blue-600 text-xl font-semibold">ABOUT</h1>
+        <div className="space-y-6">
+          <h1 className="text-blue-500 text-xl font-semibold">ABOUT US</h1>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold space-y-4">
             <span className="text-gray-600">Empowering Your </span>
             <span className="text-blue-700 underline"> Digital </span>
             <span className="text-gray-600"> Presence</span>
           </h2>
           <p className="text-black text-xl text-wrap">
-            We combine social media and digital marketing strategies to weave a
-            digital presence.
+            Our social media and digital marketing agency is dedicated to
+            amplifying your brand, reaching your target audience, and driving
+            growth.
           </p>
           <button className="bg-blue-700 hover:bg-blue-900 text-white p-3 border rounded-full font-semibold">
             Request Quote
@@ -108,24 +109,24 @@ function Steps() {
         <div className="space-y-6 md:space-y-6 order-2">
           <h1 className="p-3 grid space-y-4">
             <h2 className="flex gap-4 text-center">
-              <FaRegEye className="w-8 h-8 md:w-16 md:h-16" />
+              <img className="w-8 h-8 md:w-12 md:h-12" src={photo3} />
               <p className="text-black font-bold text-xl md:text-3xl text-center mt-3">
                 Our Vision
               </p>
             </h2>
-            <p className="text-lg md:text-xl">
+            <p className="text-lg md:text-xl text-gray-500">
               To be the leading digital partner, transforming businesses by
               implementing innovative digital marketing strategies
             </p>
           </h1>
           <h1 className="p-3 grid space-y-4">
             <h2 className="flex gap-4 text-center">
-              <GiBrokenRibbon className="w-8 h-8 md:w-16 md:h-16" />
+              <img className="w-8 h-8 md:w-12 md:h-12" src={photo4} />
               <p className="text-black font-bold text-xl md:text-3xl text-center mt-3">
                 Our Mission
               </p>
             </h2>
-            <p className="text-lg md:text-xl">
+            <p className="text-lg md:text-xl text-gray-500">
               To be the leading digital partner, transforming businesses by
               implementing innovative digital marketing strategies
             </p>

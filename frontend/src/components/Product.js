@@ -12,116 +12,127 @@ function Product() {
   const items = [
     {
       id: 1,
-      title: "Branding & Creative",
+      title: "360 Digital Marketing",
       image: photo1,
-      text1: "Branding & Creative",
-      text2: "Digital Agencies",
-      text3: "Creative Agencies",
-      text4: "Product Design Companies"
+      text1: "We provide comprehensive digital marketing services to maximize your online presence.",
+      text2: "✔️Social Media Marketing",
+      text3: "✔️SEO",
+      text4: "✔️Email Marketing",
+      text5: "✔️Analytics & Reporting"
     },
     {
       id: 2,
-      title: "Website & Interface",
+      title: "Social Media Management",
       image: photo2,
-      text1: "Web Design Companies",
-      text2: " eCommerce Development Companies",
-      text3: "Web Development Companies",
-      text4: "WordPress Web Design Companies"
+      text1: "We manage your social media platforms, ensuring consistent and engaging content.",
+      text2: "✔️Social Media Marketing",
+      text3: "✔️SEO",
+      text4: "✔️Email Marketing",
+      text5: "✔️Analytics & Reporting"
     },
     {
       id: 3,
-      title: "Marketing",
+      title: "Website Development",
       image: photo3,
-      text1: "Web Design Companies",
-      text2: " eCommerce Development Companies",
-      text3: "Web Development Companies",
-      text4: "WordPress Web Design Companies"
+      text1: "We design and develop responsive websites that represent your brand.",
+      text2: "✔️Social Media Marketing",
+      text3: "✔️SEO",
+      text4: "✔️Email Marketing",
+      text5: "✔️Analytics & Reporting"
     },
     {
       id: 4,
-      title: "Software & App",
+      title: "Host Live Commerce",
       image: photo4,
-      text1: "Web Design Companies",
-      text2: " eCommerce Development Companies",
-      text3: "Web Development Companies",
-      text4: "WordPress Web Design Companies"
+      text1: "We host live selling events to engage your audience and boost sales.",
+      text2: "✔️Social Media Marketing",
+      text3: "✔️SEO",
+      text4: "✔️Email Marketing",
+      text5: "✔️Analytics & Reporting"
     },
     {
       id: 5,
-      title: "IT Services",
+      title: "Search Engine Optimization",
       image: photo5,
-      text1: "Web Design Companies",
-      text2: " eCommerce Development Companies",
-      text3: "Web Development Companies",
-      text4: "WordPress Web Design Companies"
+      text1: "We optimize your website to rank higher on search engines, increasing visibility",
+      text2: "✔️Social Media Marketing",
+      text3: "✔️SEO",
+      text4: "✔️Email Marketing",
+      text5: "✔️Analytics & Reporting"
     },
     {
       id: 6,
-      title: "Bussiness Services",
+      title: "Brand Identity Design",
       image: photo6,
-      text1: "Bussiness Conslting Firms",
-      text2: "Market Research Companies",
-      text3: "Call Center Companies",
-      text4: "WordPress Web Design Companies"
+      text1: "We design unique & memorable brand identities that resonate with your target audience",
+      text2: "✔️Social Media Marketing",
+      text3: "✔️SEO",
+      text4: "✔️Email Marketing",
+      text5: "✔️Analytics & Reporting"
     },
     {
       id: 7,
-      title: "Bussiness Services",
+      title: "Photo & Video Creation",
       image: photo7,
-      text1: "Bussiness Conslting Firms",
-      text2: "Market Research Companies",
-      text3: "Call Center Companies",
-      text4: "WordPress Web Design Companies"
+      text1: "We create high-quality photos and videos to enhance your brand’s visual content.",
+      text2: "✔️Social Media Marketing",
+      text3: "✔️SEO",
+      text4: "✔️Email Marketing",
+      text5: "✔️Analytics & Reporting"
 
     },
     {
       id: 8,
-      title: "Bussiness Services",
+      title: "Content Marketing",
       image: photo8,
-      text1: "Bussiness Conslting Firms",
-      text2: "Market Research Companies",
-      text3: "Call Center Companies",
-      text4: "WordPress Web Design Companies"
+      text1: "We create high-quality content that resonates with your audience & builds brand loyalty.",
+      text2: "✔️Social Media Marketing",
+      text3: "✔️SEO",
+      text4: "✔️Email Marketing",
+      text5: "✔️Analytics & Reporting"
     },
   ];
   return (
     <div className="w-full relative overflow-hidden bg-white text-black py-16 md:py-12 mt-14">
       <div className="relative max-w-screen-xl mx-auto px-4 sm:px-6 md:px-8">
         <div className="text-center mb-12 space-y-5">
-          <h1 className="text-blue-700 text-center underline text-xl">SERVICES</h1>
+          <h1 className="text-blue-500 text-center text-xl">SERVICES</h1>
           <h1 className="text-3xl md:text-5xl font-bold text-black">
-            <span>Comprehensive  </span>
-            <span className="text-blue-700"> Digital Solutions</span>
+            <span className="text-gray-500">Comprehensive Digital </span>
+            <span className="text-blue-700 underline"> Solutions</span>
           </h1>
           <p className="text-wrap text-gray-600">Our team of experts leverages cutting-edge strategies to boost your online presence and drive growth.</p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {items.map((item) => (
             <div
               key={item.id}
-              className="bg-white border-gray-500 border rounded-2xl shadow-lg p-2 space-y-3"
+              className="bg-white border-gray-400 border rounded-2xl shadow-lg p-4 space-y-4"
             >
-              <img src={item.image} className="w-full h-[350px] md:h-[260px] border rounded-xl"/>
+              <img src={item.image} className="w-full h-[350px] md:h-[260px] border rounded-xl transition-transform duration-300 hover:-translate-y-2"/>
               <div className="flex items-center justify-between mb-4">
-                <h2 className="text-xl md:text-2xl font-bold text-blue-500">
+                <h2 className="text-xl md:text-3xl font-bold text-blue-800">
                   {item.title}
                 </h2>
               </div>
 
               <div className="space-y-2">
+                <h2 className="text-md md:text-md text-gray-500">
+                  {item.text1}
+                </h2>
                 {[
-                  item.text1,
                   item.text2,
                   item.text3,
                   item.text4
                 ].map((text, idx) => (
                   <p
                     key={idx}
-                    className="text-sm md:text-md text-gray-700 font-medium hover:text-blue-700 hover:scale-105 cursor-pointer transition-colors duration-500"
+                    className="text-md md:text-md text-gray-500 cursor-pointer transition-colors duration-500"
                   >
                     {text}
                   </p>
                 ))}
+                <button className="p-3 rounded-full text-semibold justify-start items-start bg-blue-700 text-white hover:bg-blue-900">Learn More</button>
               </div>
             </div>
           ))}

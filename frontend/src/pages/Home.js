@@ -7,6 +7,7 @@ import Contact from '../components/Contact.js';
 import Questions from '../components/Questions.js';
 import Compare from '../components/Compare.js';
 import Data from '../components/Data.js';
+import Slide from '../components/Slide.js';
 
 function Home() {
   return (
@@ -18,7 +19,8 @@ function Home() {
         <Product />
         <Why />
         <Compare/>
-        <Questions />
+        <Slide /> 
+        <Questions /> 
       </div>
     </>
   )
