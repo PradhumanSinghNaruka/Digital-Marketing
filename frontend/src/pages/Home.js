@@ -18,8 +18,8 @@ function Home() {
         <Data />
         <Product />
         <Why />
-        <Compare/>
         <Slide /> 
+        <Compare/>
         <Questions /> 
       </div>
     </>

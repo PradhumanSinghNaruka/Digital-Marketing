@@ -92,72 +92,142 @@
 
 // export default Why;
 
-import React from "react";
+import React, { useState } from "react";
+import { FaLongArrowAltRight } from "react-icons/fa";
+import { FaLongArrowAltLeft } from "react-icons/fa";
+import { SiComma } from "react-icons/si";
+import photo from "../image/psn.png";
 
 function Why() {
   const steps = [
     {
       id: 1,
-      image: "01",
-      title: "Beauty Live Selling",
-      description:
-        "We produced a series of product photos and videos for Connect, a women’s fashion brand. The new media content led to a 25% increase in social media engagement.",
+      title:
+        "The quality of SozioSync’s services is exceptional. They have significantly boosted my online visibility and helped me connect with potential clients.",
+      rating: "5",
+      image: photo,
+      name: "Pradhuman",
+      review: "Web Developer",
     },
     {
       id: 2,
-      image: "02",
-      title: "Kid Fashion E-commerce",
-      description:
-        "We produced a series of product photos and videos for Connect, a women’s fashion brand. The new media content led to a 25% increase in social media engagement.",
+      title:
+        "The quality of SozioSync’s services is exceptional. They have significantly boosted my online visibility and helped me connect with potential clients.",
+      rating: "4.5",
+      image: photo,
+      name: "Pradhuman",
+      review: "Web Developer",
     },
     {
       id: 3,
-      image: "03",
-      title: "Women’s Fashion Lookbook",
-      description:
-        "We produced a series of product photos and videos for Connect, a women’s fashion brand. The new media content led to a 25% increase in social media engagement.",
+      title:
+        "The quality of SozioSync’s services is exceptional. They have significantly boosted my online visibility and helped me connect with potential clients.",
+      rating: "3",
+      image: photo,
+      name: "Pradhuman",
+      review: "Web Developer",
+    },
+    {
+      id: 4,
+      title:
+        "The quality of SozioSync’s services is exceptional. They have significantly boosted my online visibility and helped me connect with potential clients.",
+      rating: "5",
+      image: photo,
+      name: "Pradhuman",
+      review: "Web Developer",
+    },
+    {
+      id: 5,
+      title:
+        "The quality of SozioSync’s services is exceptional. They have significantly boosted my online visibility and helped me connect with potential clients.",
+      rating: "5",
+      image: photo,
+      name: "Pradhuman",
+      review: "Web Developer",
+    },
+    {
+      id: 6,
+      title:
+        "The quality of SozioSync’s services is exceptional. They have significantly boosted my online visibility and helped me connect with potential clients.",
+      rating: "4.5",
+      image: photo,
+      name: "Pradhuman",
+      review: "Web Developer",
     },
   ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handlePrev = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex(currentIndex - 1);
+    }
+  };
+
+  const handleNext = () => {
+    if (currentIndex + 3 < steps.length) {
+      setCurrentIndex(currentIndex + 1);
+    }
+  };
+
+  const visibleItems = steps.slice(currentIndex, currentIndex + 3);
   return (
-    <div className="w-full bg-white text-black py-12 md:py-20 mt-12 md:mt-16">
+    <div className="w-full bg-blue-50 text-black py-12 md:py-20 mt-12 md:mt-16">
       <div className="max-w-screen-xl mx-auto px-4">
         <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-8">
           <div className="md:w-1/2 flex flex-col items-start text-start space-y-4">
             <p className="text-base md:text-lg font-semibold uppercase tracking-wider text-blue-500">
-              CASE STUDIES
+              TESTIMONIALS
             </p>
             <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold w-full">
-              <span className="text-gray-500">Crafting Digital </span>
-              <span className="text-blue-700">Experiences</span>
+              <span className="text-gray-500">What Our Clients Say </span>
+              <span className="text-blue-700 underline"> About Us</span>
             </h1>
           </div>
-          <div className="md:w-1/2 flex flex-col items-start text-start">
-            <p className="text-gray-500 text-md md:text-lg w-full text-wrap">
-              We are passionate about crafting unique digital experiences that
-              resonate with audiences. Our tailored strategies have driven
-              significant results for our clients, propelling their growth in
-              the digital space.
-            </p>
+          <div className="md:w-1/2 flex flex-row justify-end mt-4 items-end text-end gap-6">
+            <FaLongArrowAltLeft
+              onClick={handlePrev}
+              className="w-14 h-14 p-4 rounded-lg bg-blue-700 text-white cursor-pointer"
+            />
+            <FaLongArrowAltRight
+              onClick={handleNext}
+              className="w-14 h-14 p-4 rounded-lg bg-blue-700 text-white cursor-pointer"
+            />
           </div>
         </div>
-        <div className="flex flex-col divide-y divide-gray-200 mt-16 md:mt-24">
-          {steps.map((item) => (
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 md:mt-16">
+          {visibleItems.map((item) => (
             <div
               key={item.id}
-              className="flex flex-col md:flex-row md:items-center justify-between py-6 gap-4"
+              className="border bg-white rounded-xl p-2 hover:shadow-xl"
             >
-              <div className="flex items-start md:items-center gap-6 flex-1">
-                <div className="flex items-center justify-center w-16 h-16 rounded-full bg-blue-100 text-blue-700 font-bold text-lg">
-                  {item.id.toString().padStart(2, "0")}
-                </div>
-                <div className="space-y-2">
-                  <h3 className="text-2xl font-bold text-black">{item.title}</h3>
-                  <p className="text-gray-500 text-base text-balance">{item.description}</p>
+              <div className="grid items-start md:items-center gap-6 flex-1 p-4">
+                <h1 className="text-gray-500">{item.title}</h1>
+                <p className="text-yellow-500 text-xl">
+                  {"★".repeat(Math.floor(item.rating))}
+                  {"☆".repeat(5 - Math.floor(item.rating))}
+                </p>
+                <div className="space-y-2 w-full flex gap-2">
+                  <div className="w-1/2 flex gap-2">
+                    <img
+                      src={item.image}
+                      alt=""
+                      className="w-12 h-12 rounded-full"
+                    />
+                    <h1 className="font-bold">
+                      {item.name}
+                      <br />
+                      <span className="text-gray-500 font-semibold">
+                        {item.review}
+                      </span>
+                    </h1>
+                  </div>
+                  <div className="w-1/2 text-end justify-end items-end">
+                    <SiComma className="text-blue-700 text-end" />
+                  </div>
                 </div>
               </div>
-              <button className="bg-blue-600 hover:bg-blue-700 text-white p-4 px-3 rounded-full text-sm font-semibold transition">
-                Read Detail
-              </button>
             </div>
           ))}
         </div>
