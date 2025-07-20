@@ -75,11 +75,10 @@ function Navbar({ cartItemCount }) {
   const navigate = useNavigate();
   const navItems = [
     { id: 1, text: "HOME", path: "/"},
-    { id: 2, text: "ABOUT", path: "/about" },
+    { id: 2, text: "ABOUT US", path: "/about" },
     { id: 4, text: "SERVICE", path: "/service" },
-    { id: 5, text: "CASE STUDY", path: "" },
-    { id: 6, text: "PAGES", path: "" },
-    { id: 7, text: "CONTACT", path: "/contact" },
+    { id: 5, text: "BLOG", path: "" },
+    { id: 6, text: "CONTACT US", path: "/contact" },
   ];
 
   return (
