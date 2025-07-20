@@ -50,19 +50,18 @@ function Questions() {
   };
   return (
     <>
-      <div
-        name="Home"
-        className="w-full px-4 md:px-20 py-12 bg-white"
-      >
+      <div name="Home" className="w-full px-4 md:px-20 py-12 bg-white">
         <div className="max-w-screen-xl mx-auto">
-          <h1 className="text-center underline text-blue-800 text-md">FAQ's</h1>
+          <h1 className="text-center text-blue-500 text-md">SOZIOSYNZ FAQS</h1>
           <h1 className="text-center text-3xl md:text-5xl font-bold mb-12">
-            <span className="text-blue-700">Frequently</span>{" "}
-            <span className="text-black">Questions</span>
+            <span className="text-gray-600">Frequently Asked </span>{" "}
+            <span className="text-blue-700"> Questions</span>
           </h1>
-          <p className="text-gray-500 text-center text-wrap">Elevate your brand’s digital footprint with our specially curated
-            Digital Growth Packages. Select the plan that aligns with your
-            ambitions and witness your brand thrive in the digital era.</p>
+          <p className="text-gray-500 text-center text-balance">
+            Explore answers to common questions about our social media and
+            digital marketing agency, dedicated to helping businesses thrive in
+            the online world.
+          </p>
           <div className="space-y-6 mt-6">
             {faqs.map((faq, index) => (
               <div
