@@ -1,137 +1,202 @@
 import React from "react";
-import photo1 from "../image/service1.jpg";
-import photo2 from "../image/service2.jpg";
-import photo4 from "../image/service4.jpg";
-import photo5 from "../image/service5.jpg";
+import photo3 from "../image/servicedetail3.png";
+import photo4 from "../image/servicedetail4.png";
+import photo5 from "../image/servicedetail5.png";
+import photo6 from "../image/servicedetail6.png";
+import photo7 from "../image/servicedetail7.jpg";
+import { IoIosArrowForward } from "react-icons/io";
+import photo from "../image/servicedetail1.jpg";
+import photo1 from "../image/blog2.jpg";
+import photo2 from "../image/servicedetail2.jpg";
 
 function Service() {
+  const items = [
+    {
+      id: 1,
+      img: photo3,
+      heading: "Business Goals",
+      para: "We align marketing strategies with business objectives to drive growth and achieve milestones.",
+    },
+    {
+      id: 2,
+      img: photo4,
+      heading: "Target Market",
+      para: "Our strategies target the right audience, delivering the perfect message effectively.",
+    },
+    {
+      id: 3,
+      img: photo5,
+      heading: "Industry Trends",
+      para: "Stay competitive with strategies leveraging industry trends to keep your brand relevant.",
+    },
+    {
+      id: 4,
+      img: photo6,
+      heading: "Brand Vision",
+      para: "We ensure every strategy aligns with your brand’s voice, vision, and consistency.",
+    },
+  ];
+
+  const steps = [
+    {
+      id: 1,
+      heading: "Conversion Rate",
+      para: "Boosted conversion rates with customized marketing and data-driven optimization.",
+      number: "+35%",
+    },
+    {
+      id: 2,
+      heading: "ROI Growth",
+      para: "Achieved significant ROI through strategic ad placements and targeted campaigns.",
+      number: "+300%",
+    },
+    {
+      id: 3,
+      heading: "Organic Traffic",
+      para: "Boosted organic search traffic with advanced SEO and content strategies.",
+      number: "+200%",
+    },
+    {
+      id: 4,
+      heading: "Engagement Rate",
+      para: "Improved social media engagement through targeted content and audience interaction.",
+      number: "+50%",
+    },
+  ];
   return (
-    <div className="w-full mt-14">
-      <h1 className="bg-gradient-to-b from-blue-300 to-white py-12 text-center w-full text-3xl md:text-4xl lg:text-5xl text-black font-bold">
-        Our Services
-      </h1>
-      <div className="space-y-14 w-full">
-        <div className="max-w-screen-2xl mx-auto px-6 py-12 grid md:grid-cols-2 gap-8 items-center">
-          <div className="space-y-6">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold">
-              A team of professionals, passionate about new technologies & progress
-            </h2>
-            <p className="text-gray-600 text-base md:text-lg leading-relaxed">
-              Quisque nec quam convallis, scelerisque risus in, viverra ipsum.
-              Mauris sed molestie magna. Nunc auctor aliquet tortor in venenatis.
-              Suspendisse potenti. Etiam quis suscipit nulla. Cras at facilisis
-              risus, nec accumsan urna. Praesent congue aliquet nisi, lorem eu
-              hendrerit sem lobortis nec.
-            </p>
-            <div className="flex flex-wrap justify-between">
-              <div>
-                <p className="text-xl md:text-2xl text-blue-600 font-bold">est. 2024</p>
-                <p className="text-base md:text-lg">A decade of expertise</p>
-              </div>
-              <div>
-                <p className="text-xl md:text-2xl text-blue-600 font-bold">100%</p>
-                <p className="text-base md:text-lg">Satisfied Customers</p>
-              </div>
-            </div>
-          </div>
-          <div>
-            <img src={photo1} alt="Service 1" className="w-full h-[350px] md:h-[450px] object-cover rounded-2xl shadow" />
-          </div>
+    <div
+      name="Home"
+      className="w-full min-h-screen grid overflow-hidden mt-12 md:mt-16 bg-white"
+    >
+      <div className="w-full h-[90vh] md:h-[80vh] bg-gray-900 items-center text-center justify-between space-y-8">
+        <div className="space-y-4 md:space-y-8 px-12 md:px-28 lg:px-36">
+          <h1 className="text-white text-3xl md:text-5xl lg:text-6xl justify-between font-bold mt-20">
+            Service
+          </h1>
+          <p className="text-white text-md flex text-center justify-center items-center gap-2">
+            Home
+            <IoIosArrowForward className="text-blue-700 text-center" />
+            <p> Service </p>
+          </p>
+          <p className="text-white">
+            Nulla risus eros, imperdiet in finibus non, mollis et turpis.
+            Aliquam erat volutpat. Nunc at lacus a purus pretium volutpat nec
+            quis mi. Ut vulputate rutrum malesuada.
+          </p>
         </div>
-        <div className="max-w-screen-2xl mx-auto px-6 py-12 grid md:grid-cols-2 gap-8 items-center">
-          <div className="space-y-6 order-2 md:order-1">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold">
-              A team of professionals, passionate about new technologies & progress
-            </h2>
-            <p className="text-gray-600 text-base md:text-lg leading-relaxed">
-              Quisque nec quam convallis, scelerisque risus in, viverra ipsum.
-              Mauris sed molestie magna. Nunc auctor aliquet tortor in venenatis.
-              Suspendisse potenti. Etiam quis suscipit nulla. Cras at facilisis
-              risus, nec accumsan urna. Praesent congue aliquet nisi, lorem eu
-              hendrerit sem lobortis nec.
-            </p>
-            <div className="flex flex-wrap justify-between">
-              <div>
-                <p className="text-xl md:text-2xl text-blue-600 font-bold">est. 2024</p>
-                <p className="text-base md:text-lg">A decade of expertise</p>
-              </div>
-              <div>
-                <p className="text-xl md:text-2xl text-blue-600 font-bold">100%</p>
-                <p className="text-base md:text-lg">Satisfied Customers</p>
-              </div>
-            </div>
-          </div>
-          <div className="order-1 md:order-2">
-            <img src={photo2} alt="Service 2" className="w-full h-[350px] md:h-[450px] object-cover rounded-2xl shadow" />
-          </div>
-        </div>
-        <div className="max-w-screen-2xl mx-auto px-6 py-12 grid md:grid-cols-2 gap-8 items-center">
-          <div className="space-y-6 order-2 md:order-1">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold">
-              A team of professionals, passionate about new technologies & progress
-            </h2>
-            <p className="text-gray-600 text-base md:text-lg leading-relaxed">
-              Quisque nec quam convallis, scelerisque risus in, viverra ipsum.
-              Mauris sed molestie magna. Nunc auctor aliquet tortor in venenatis.
-              Suspendisse potenti. Etiam quis suscipit nulla. Cras at facilisis
-              risus, nec accumsan urna. Praesent congue aliquet nisi, lorem eu
-              hendrerit sem lobortis nec.
-            </p>
-            <div className="flex flex-wrap justify-between">
-              <div>
-                <p className="text-xl md:text-2xl text-blue-600 font-bold">est. 2024</p>
-                <p className="text-base md:text-lg">A decade of expertise</p>
-              </div>
-              <div>
-                <p className="text-xl md:text-2xl text-blue-600 font-bold">100%</p>
-                <p className="text-base md:text-lg">Satisfied Customers</p>
-              </div>
-            </div>
-          </div>
-          <div className="order-1 md:order-2">
-            <img src={photo4} alt="Service 3" className="w-full h-[350px] md:h-[450px] object-cover rounded-2xl shadow" />
-          </div>
-        </div>
-        <div className="max-w-screen-2xl mx-auto px-6 py-12 grid md:grid-cols-2 gap-8 items-center">
-          <div className="space-y-6 order-2 md:order-1">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold">
-              A team of professionals, passionate about new technologies & progress
-            </h2>
-            <p className="text-gray-600 text-base md:text-lg leading-relaxed">
-              Quisque nec quam convallis, scelerisque risus in, viverra ipsum.
-              Mauris sed molestie magna. Nunc auctor aliquet tortor in venenatis.
-              Suspendisse potenti. Etiam quis suscipit nulla. Cras at facilisis
-              risus, nec accumsan urna. Praesent congue aliquet nisi, lorem eu
-              hendrerit sem lobortis nec.
-            </p>
-            <div className="flex flex-wrap justify-between">
-              <div>
-                <p className="text-xl md:text-2xl text-blue-600 font-bold">est. 2024</p>
-                <p className="text-base md:text-lg">A decade of expertise</p>
-              </div>
-              <div>
-                <p className="text-xl md:text-2xl text-blue-600 font-bold">100%</p>
-                <p className="text-base md:text-lg">Satisfied Customers</p>
-              </div>
-            </div>
-          </div>
-          <div className="order-1 md:order-2">
-            <img src={photo5} alt="Service 4" className="w-full h-[350px] md:h-[450px] object-cover rounded-2xl shadow" />
-          </div>
+        <div className="w-full h:[200px] md:h-[360px] justify-center items-center text-center px-36 hidden md:block">
+          <img src={photo} className="w-full h-full rounded-xl" />
         </div>
       </div>
-      <div className="w-full bg-gradient-to-b from-white to-blue-300 py-12">
-        <div className="max-w-screen-xl mx-auto text-center px-6 space-y-6">
-          <h2 className="font-bold text-black text-2xl md:text-4xl lg:text-5xl">
-            Join thousands of business owners & companies who trust The Seven!
-          </h2>
-          <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8">
-            <button className="px-6 py-3 rounded-full font-bold text-sm md:text-lg text-black bg-gradient-to-r from-blue-400 to-white hover:from-white hover:to-blue-400 transition">
-              Contact us
+      <div className="mt-28 md:mt-52 px-8 mb-12">
+        <div className="w-full flex mt-12">
+          <div className="bg-white w-1/2 space-y-5">
+            <h1 className="text-blue-600">360 DIGITAL MARKETING OVERVIEW</h1>
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold">
+              <span className="text-gray-500">
+                Comprehensive Solutions For Complete Online{" "}
+              </span>
+              <span className="text-blue-700 underline"> Success</span>
+            </h1>
+            <p className="text-wrap text-gray-500">
+              Our 360 Digital Marketing Services cover every aspect of your
+              digital presence, from strategy to execution. We ensure cohesive
+              and impactful results across SEO, social media, email marketing,
+              and more.
+            </p>
+            <hr />
+            <div className="flex gap-6 text-gray-500">
+              <h1>✔️Social Media Marketing</h1>
+              <h1>✔️SEO</h1>
+              <h1>✔️Email Marketing</h1>
+              <h1>✔️Analytics</h1>
+            </div>
+            <button className="text-white bg-blue-700 rounded-full p-3 font-bold mt-3 hover:bg-blue-900">
+              Request a Session
             </button>
-            <button className="px-6 py-3 rounded-full font-bold text-sm md:text-lg text-black bg-gradient-to-r from-white to-blue-400 hover:from-blue-400 hover:to-white transition">
-              Request a call back
-            </button>
+          </div>
+          <div className="text-white w-1/2 justify-center items-center">
+            <img src={photo2} className="rounded-2xl" />
+          </div>
+        </div>
+        <div className="mt-28 px-8 mb-12">
+          <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-8">
+            <div className="md:w-1/2 flex flex-col items-start text-start space-y-4">
+              <p className="text-base md:text-lg font-semibold uppercase tracking-wider text-blue-500">
+                CUSTOM STRATEGIC
+              </p>
+              <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold w-full">
+                <span className="text-gray-500">
+                  Tailored Solutions for Your Unique Business{" "}
+                </span>
+                <span className="text-blue-700 underline"> Needs</span>
+              </h1>
+            </div>
+            <div className="md:w-1/2 flex flex-row justify-end mt-4 items-start text-start gap-6">
+              <p className="text-gray-500 text-wrap">
+                We create personalized marketing strategies based on your
+                business goals, target market, and industry trends. Our approach
+                ensures that your campaigns are effective and aligned with your
+                brand vision
+              </p>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-12 md:mt-16">
+            {items.map((item) => (
+              <div
+                key={item.id}
+                className="bg-white rounded-xl flex justify-center items-center text-center border border-gray-300"
+              >
+                <div className="grid justify-items-center items-start md:items-center gap-6 flex-1 p-4">
+                  <img src={item.img} className="w-10 h-10 rounded-xl" />
+                  <h1 className="text-blue-700 text-2xl rounded-md font-semibold">
+                    {item.heading}
+                  </h1>
+                  <p className="text-gray-500 text-md font-semibold">
+                    {item.para}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="mt-10 md:mt-24">
+            <div className="grid md:justify-between md:items-start gap-8">
+              <div className="wfull flex flex-col items-center text-center space-y-4 px-14 md:px-44">
+                <p className="text-base md:text-lg font-semibold uppercase tracking-wider text-blue-500">
+                  PROVEN RESULTS
+                </p>
+                <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold w-full">
+                  <span className="text-gray-600">
+                    Focused on Delivering Tangible{" "}
+                  </span>
+                  <span className="text-blue-700 underline"> Outcomes</span>
+                </h1>
+                <p className="text-gray-500 text-wrap">
+                  Explore our latest blog posts on social media strategies, SEO
+                  techniques, and digital marketing trends. Stay ahead in the
+                  fast-evolving world of digital marketing.
+                </p>
+              </div>
+              <div className="w-full flex gap-6">
+                <div className="w-1/2 justify-center items-center text-center">
+                  <img src={photo7} className="w-full h-full rounded-2xl" />
+                </div>
+                <div className="w-1/2">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8">
+                    {steps.map((step) => (
+                      <div
+                        key={step.id}
+                        className="bg-white border-gray-300 border rounded-2xl shadow-md p-4 space-y-4"
+                      >
+                        <h1 className="text-black font-semibold text-xl">{step.heading}</h1>
+                        <p className="text-wrap text-gray-600">{step.para}</p>
+                        <h1 className="text-3xl text-blue-700 font-bold">{step.number}</h1>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

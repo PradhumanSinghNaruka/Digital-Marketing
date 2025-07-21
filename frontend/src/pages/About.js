@@ -1,90 +1,48 @@
 import React from "react";
-import photo1 from "../image/about1.jpg";
-import photo2 from "../image/about2.jpg";
+import photo1 from "../image/about3.jpg";
+import { IoIosArrowForward } from "react-icons/io";
+import Steps from "../components/Steps";
+import Why from "../components/Why";
+import Slide from "../components/Slide";
+import Compare from "../components/Compare";
 
 function About() {
   return (
-    <div className="w-full mt-14">
-      <h1 className="bg-gradient-to-b from-blue-300 to-white py-12 text-center w-full text-3xl md:text-4xl lg:text-5xl text-black font-bold">
-        About Us
-      </h1>
-      <div className="max-w-screen-2xl mx-auto px-6 py-12 grid md:grid-cols-2 gap-8 items-center">
-        <div>
-          <img
-            src={photo1}
-            alt="About"
-            className="w-full h-[350px] md:h-[450px] object-cover rounded-2xl shadow"
-          />
-        </div>
-        <div className="space-y-6">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold">
-            A team of professionals, passionate about new technologies & progress
-          </h2>
-          <p className="text-gray-600 text-base md:text-lg leading-relaxed">
-            Quisque nec quam convallis, scelerisque risus in, viverra ipsum.
-            Mauris sed molestie magna. Nunc auctor aliquet tortor in venenatis.
-            Suspendisse potenti. Etiam quis suscipit nulla. Cras at facilisis
-            risus, nec accumsan urna. Praesent congue aliquet nisi, lorem eu
-            hendrerit sem lobortis nec.
+    <div
+      name="Home"
+      className="w-full min-h-screen grid overflow-hidden mt-12 md:mt-16 bg-white"
+    >
+      <div className="w-full h-[90vh] md:h-[80vh] bg-gray-900 items-center text-center justify-between space-y-8">
+        <div className="space-y-4 md:space-y-8 px-12 md:px-28 lg:px-36">
+          <h1 className="text-white text-3xl md:text-5xl lg:text-6xl justify-between font-bold mt-20">
+            About
+          </h1>
+          <p className="text-white text-md flex text-center justify-center items-center gap-2">
+            Home
+            <IoIosArrowForward className="text-blue-700 text-center" />
+            <p> About</p>
           </p>
-          <div className="flex flex-wrap justify-between">
-            <div>
-              <p className="text-xl md:text-2xl text-blue-600 font-bold">est. 2024</p>
-              <p className="text-base md:text-lg">A decade of expertise</p>
-            </div>
-            <div>
-              <p className="text-xl md:text-2xl text-blue-600 font-bold">100%</p>
-              <p className="text-base md:text-lg">Satisfied Customers</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="max-w-screen-2xl mx-auto px-6 py-12 grid md:grid-cols-2 gap-8 items-center">
-        <div className="space-y-6 order-2 md:order-1">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold">
-            A team of professionals, passionate about new technologies & progress
-          </h2>
-          <p className="text-gray-600 text-base md:text-lg leading-relaxed">
-            Quisque nec quam convallis, scelerisque risus in, viverra ipsum.
-            Mauris sed molestie magna. Nunc auctor aliquet tortor in venenatis.
-            Suspendisse potenti. Etiam quis suscipit nulla. Cras at facilisis
-            risus, nec accumsan urna. Praesent congue aliquet nisi, lorem eu
-            hendrerit sem lobortis nec.
+          <p className="text-white">
+            Nulla risus eros, imperdiet in finibus non, mollis et turpis.
+            Aliquam erat volutpat. Nunc at lacus a purus pretium volutpat nec
+            quis mi. Ut vulputate rutrum malesuada.
           </p>
-          <div className="flex flex-wrap justify-between">
-            <div>
-              <p className="text-xl md:text-2xl text-blue-600 font-bold">est. 2024</p>
-              <p className="text-base md:text-lg">A decade of expertise</p>
-            </div>
-            <div>
-              <p className="text-xl md:text-2xl text-blue-600 font-bold">100%</p>
-              <p className="text-base md:text-lg">Satisfied Customers</p>
-            </div>
-          </div>
         </div>
-        <div className="order-1 md:order-2">
-          <img
-            src={photo2}
-            alt="About"
-            className="w-full h-[350px] md:h-[450px] object-cover rounded-2xl shadow"
-          />
+        <div className="w-full h:[200px] md:h-[360px] justify-center items-center text-center px-36 hidden md:block">
+          <img src={photo1} className="w-full h-full rounded-xl" />
         </div>
       </div>
-      <div className="w-full bg-gradient-to-b from-white to-blue-100 py-12">
-        <div className="max-w-screen-xl mx-auto text-center px-6 space-y-6">
-          <h2 className="font-bold text-black text-2xl md:text-4xl lg:text-5xl">
-            Join thousands of business owners & companies who trust The Seven!
-          </h2>
-          <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8">
-            <button className="px-6 py-3 rounded-full font-bold text-sm md:text-lg text-black bg-gradient-to-r from-blue-300 to-white hover:from-white hover:to-blue-300 transition">
-              Contact us
-            </button>
-            <button className="px-6 py-3 rounded-full font-bold text-sm md:text-lg text-black bg-gradient-to-r from-white to-blue-300 hover:from-blue-300 hover:to-white transition">
-              Request a call back
-            </button>
-          </div>
-        </div>
+      <div className="mt-28 md:mt-52 px-8 mb-12">
+        <Steps/>
       </div>
+      <div className="w-full mt-12">
+        <Slide/>
+      </div>
+      <div className="w-full mt-12">
+        <Why/>
+      </div>
+      
+      
     </div>
   );
 }

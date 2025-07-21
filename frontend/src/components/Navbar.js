@@ -77,8 +77,8 @@ function Navbar({ cartItemCount }) {
     { id: 1, text: "HOME", path: "/"},
     { id: 2, text: "ABOUT US", path: "/about" },
     { id: 4, text: "SERVICE", path: "/service" },
-    { id: 5, text: "BLOG", path: "" },
-    { id: 6, text: "CONTACT US", path: "/contact" },
+    { id: 5, text: "BLOG", path: "/blog" },
+    { id: 6, text: "CONTACT US", path: "/contactus" },
   ];
 
   return (

@@ -66,7 +66,7 @@ function Hero() {
             DIGITAL EXCELLENCE
           </p>
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-            <span className="text-gray-700">Weaving Your Digital </span>
+            <span className="text-gray-500">Weaving Your Digital </span>
             <span className="text-blue-700 border-b-4 border-blue-700">
               Success
             </span>
