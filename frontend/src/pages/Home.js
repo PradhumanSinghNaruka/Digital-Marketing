@@ -16,7 +16,7 @@ function Home() {
         <Hero />
         <Steps />
         <Data />
-        <Product />
+        <Product /> 
         <Why />
         <Slide /> 
         <Compare/>

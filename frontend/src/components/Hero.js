@@ -62,11 +62,11 @@ function Hero() {
     >
       <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row items-center justify-between px-4 md:px-8 lg:px-12 gap-10 md:gap-16 mt-4">
         <div className="w-full md:w-3/5 space-y-4 md:space-y-6 text-center md:text-left">
-          <p className="font-semibold text-sm md:text-base uppercase text-blue-700 tracking-wider">
+          <p className="font-semibold text-sm md:text-base uppercase text-blue-500 tracking-wider">
             DIGITAL EXCELLENCE
           </p>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-            <span className="text-gray-500">Weaving Your Digital </span>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
+            <span className="text-gray-600">Weaving Your Digital </span>
             <span className="text-blue-700 border-b-4 border-blue-700">
               Success
             </span>

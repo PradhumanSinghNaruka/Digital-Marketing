@@ -176,7 +176,7 @@ function Why() {
       <div className="max-w-screen-xl mx-auto px-4">
         <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-8">
           <div className="md:w-1/2 flex flex-col items-start text-start space-y-4">
-            <p className="text-base md:text-lg font-semibold uppercase tracking-wider text-blue-500">
+            <p className="text-base md:text-md tracking-wider text-blue-600">
               TESTIMONIALS
             </p>
             <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold w-full">
@@ -223,7 +223,8 @@ function Why() {
                       </span>
                     </h1>
                   </div>
-                  <div className="w-1/2 text-end justify-end items-end">
+                  <div className="w-1/2 text-end justify-end items-end flex">
+                    <SiComma className="text-blue-700 text-end" />
                     <SiComma className="text-blue-700 text-end" />
                   </div>
                 </div>

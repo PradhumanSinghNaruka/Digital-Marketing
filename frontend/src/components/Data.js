@@ -40,7 +40,7 @@ function Data() {
               key={item.id}
               className="border border-blue-200 bg-white rounded-xl shadow-lg cursor-pointer p-4 space-y-6"
             >
-              <h3 className="text-xl md:text-2xl font-bold text-black mb-2">
+              <h3 className="text-xl md:text-2xl font-semibold text-black mb-2">
                 {item.title}
               </h3>
               <p className="text-sm md:text-md text-gray-600">

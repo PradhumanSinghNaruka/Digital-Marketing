@@ -43,14 +43,14 @@ function Compare() {
     <div className="w-full bg-blue-50 text-black py-12 md:py-20">
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
         <div className="max-w-screen-md mx-auto text-center space-y-6 md:space-y-8">
-          <p className="text-base md:text-lg font-semibold uppercase tracking-wider text-blue-600">
+          <p className="text-base md:text-md uppercase tracking-wider text-blue-500">
             PRICING
           </p>
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold">
-            <span className="text-gray-700">Digital Growth </span>
+            <span className="text-gray-500">Digital Growth </span>
             <span className="text-blue-800">Packages</span>
           </h1>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-500 text-lg max-w-2xl mx-auto">
             Elevate your brand’s digital footprint with our specially curated
             Digital Growth Packages. Select the plan that aligns with your
             ambitions and witness your brand thrive in the digital era.

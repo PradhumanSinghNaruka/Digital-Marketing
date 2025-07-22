@@ -37,11 +37,9 @@ function Footer() {
             </a>
           </div>
         </div>
-
-        {/* Right side columns */}
         <div className="flex flex-col space-y-2">
           <h3 className="text-white font-semibold mb-4">Company</h3>
-          <a href="#" className="hover:text-white">
+          <a href="/about" className="hover:text-white">
             About Us
           </a>
           <a href="#" className="hover:text-white">

@@ -82,18 +82,18 @@ function Steps() {
     <div className="w-full mt-14 flex h-full">
       <div className="w-1/2 max-w-screen-2xl mx-auto px-6 py-12 grid gap-8 items-center">
         <div className="space-y-6">
-          <h1 className="text-blue-500 text-xl font-semibold">ABOUT US</h1>
+          <h1 className="text-blue-600 text-lg ">ABOUT US</h1>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold space-y-4">
-            <span className="text-gray-600">Empowering Your </span>
+            <span className="text-gray-500">Empowering Your </span>
             <span className="text-blue-700 underline"> Digital </span>
-            <span className="text-gray-600"> Presence</span>
+            <span className="text-gray-500"> Presence</span>
           </h2>
-          <p className="text-black text-xl text-wrap">
+          <p className="text-gray-500 text-md text-wrap">
             Our social media and digital marketing agency is dedicated to
             amplifying your brand, reaching your target audience, and driving
             growth.
           </p>
-          <button className="bg-blue-700 hover:bg-blue-900 text-white p-3 border rounded-full font-semibold">
+          <button className="bg-blue-700 hover:bg-blue-900 text-white p-3 px-8 border rounded-full font-semibold">
             Request Quote
           </button>
         </div>
@@ -114,7 +114,7 @@ function Steps() {
                 Our Vision
               </p>
             </h2>
-            <p className="text-lg md:text-xl text-gray-500">
+            <p className="text-lg text-gray-500">
               To be the leading digital partner, transforming businesses by
               implementing innovative digital marketing strategies
             </p>
@@ -126,7 +126,7 @@ function Steps() {
                 Our Mission
               </p>
             </h2>
-            <p className="text-lg md:text-xl text-gray-500">
+            <p className="text-lg text-gray-500">
               To be the leading digital partner, transforming businesses by
               implementing innovative digital marketing strategies
             </p>

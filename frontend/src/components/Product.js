@@ -96,12 +96,12 @@ function Product() {
     <div className="w-full relative overflow-hidden bg-white text-black py-16 md:py-12 mt-14">
       <div className="relative max-w-screen-xl mx-auto px-4 sm:px-6 md:px-8">
         <div className="text-center mb-12 space-y-5">
-          <h1 className="text-blue-500 text-center text-xl">SERVICES</h1>
+          <h1 className="text-blue-600 text-center text-md">SERVICES</h1>
           <h1 className="text-3xl md:text-5xl font-bold text-black">
             <span className="text-gray-500">Comprehensive Digital </span>
             <span className="text-blue-700 underline"> Solutions</span>
           </h1>
-          <p className="text-wrap text-gray-600">Our team of experts leverages cutting-edge strategies to boost your online presence and drive growth.</p>
+          <p className="text-wrap text-gray-500">Our team of experts leverages cutting-edge strategies to boost your online presence and drive growth.</p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {items.map((item) => (
@@ -132,7 +132,7 @@ function Product() {
                     {text}
                   </p>
                 ))}
-                <button className="p-3 rounded-full text-semibold justify-start items-start bg-blue-700 text-white hover:bg-blue-900">Learn More</button>
+                <button className="p-3 px-6 py-2 rounded-full text-semibold justify-start items-start bg-blue-700 text-white hover:bg-blue-900">Learn More</button>
               </div>
             </div>
           ))}

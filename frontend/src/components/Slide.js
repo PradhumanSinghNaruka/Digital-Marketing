@@ -55,12 +55,12 @@ function Slide() {
     <div className="mt-24 mb-12">
       <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-8 px-8">
         <div className="md:w-1/2 flex flex-col items-start text-start space-y-4">
-          <p className="text-base md:text-lg font-semibold uppercase tracking-wider text-blue-500">
+          <p className="text-base md:text-md uppercase tracking-wider text-blue-500">
             CASE STUDIES
           </p>
           <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold w-full">
-            <span className="text-gray-500">Crafting Digital </span>
-            <span className="text-blue-700">Experiences</span>
+            <span className="text-gray-500">Tailored to Your </span>
+            <span className="text-blue-700 underline"> Brand</span>
           </h1>
         </div>
         <div className="md:w-1/2 flex flex-col items-start text-start">
