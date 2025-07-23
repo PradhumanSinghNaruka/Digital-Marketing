@@ -86,7 +86,7 @@ function Blog() {
               <span className="text-blue-700 underline"> Trends</span>
             </h1>
           </div>
-          <div className="md:w-1/2 flex flex-row justify-end mt-4 items-end text-end gap-6">
+          <div className="md:w-1/2 flex flex-row justify-start mt-4 items-start text-start gap-6">
             <p className="text-gray-500 text-wrap">
               Explore our latest blog posts on social media strategies, SEO
               techniques, and digital marketing trends. Stay ahead in the

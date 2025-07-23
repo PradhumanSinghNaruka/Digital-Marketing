@@ -20,7 +20,7 @@ function Home() {
         <Why />
         <Slide /> 
         <Compare/>
-        <Questions /> 
+        <Questions />
       </div>
     </>
   )

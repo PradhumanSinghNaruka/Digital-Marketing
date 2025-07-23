@@ -4,10 +4,15 @@ import photo4 from "../image/servicedetail4.png";
 import photo5 from "../image/servicedetail5.png";
 import photo6 from "../image/servicedetail6.png";
 import photo7 from "../image/servicedetail7.jpg";
+import photo8 from "../image/servicedetail8.jpg";
+import photo9 from "../image/servicedetail9.jpg";
+import photo10 from "../image/servicedetail10.jpg";
+import photo11 from "../image/servicedetail11.jpg";
 import { IoIosArrowForward } from "react-icons/io";
 import photo from "../image/servicedetail1.jpg";
 import photo1 from "../image/blog2.jpg";
 import photo2 from "../image/servicedetail2.jpg";
+import { useNavigate } from "react-router-dom";
 
 function Service() {
   const items = [
@@ -63,6 +68,25 @@ function Service() {
       number: "+50%",
     },
   ];
+
+  const numbers = [
+    {
+      id: 1,
+      number: "+50%",
+      text: "FOLLOWERS GROWTH",
+    },
+    {
+      id: 2,
+      number: "+35%",
+      text: "ENGRAVED RATES",
+    },
+    {
+      id: 3,
+      number: "+40%",
+      text: "SOCIALS REFERALS",
+    },
+  ];
+
   return (
     <div
       name="Home"
@@ -117,6 +141,165 @@ function Service() {
           </div>
           <div className="text-white w-1/2 justify-center items-center">
             <img src={photo2} className="rounded-2xl" />
+          </div>
+        </div>
+        <div className="mt-32 w-full mb-12">
+          <div className="bg-white w-full space-y-5 justify-center items-center text-center px-48">
+            <h1 className="text-blue-500 text-md">Core Channels</h1>
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold px-24">
+              <span className="text-gray-500">
+                Leveraging Every Digital Platform to Boost Your{" "}
+              </span>
+              <span className="text-blue-700 underline"> Brand</span>
+            </h1>
+            <p className="text-wrap text-gray-500">
+              We optimize key digital channels like Social Media Marketing, SEO,
+              Email Marketing, and Analytics & Reporting to grow your brand.
+              Each channel is crafted to engage your audience and drive
+              measurable results.
+            </p>
+          </div>
+          <div className="w-full px-6 flex border rounded-xl mt-12 space-x-6 bg-gray-200 py-4">
+            <h1 className="p-3 text-center w-[270px] border rounded-xl hover:text-white hover:bg-blue-600 duration-300">
+              Pradhuman
+            </h1>
+            <h1 className="p-3 text-center w-[270px] border rounded-xl hover:text-white hover:bg-blue-600 duration-300">
+              Pradhuman
+            </h1>
+            <h1 className="p-3 text-center w-[270px] border rounded-xl hover:text-white hover:bg-blue-600 duration-300">
+              Pradhuman
+            </h1>
+            <h1 className="p-3 text-center w-[270px] border rounded-xl hover:text-white hover:bg-blue-600 duration-300">
+              Pradhuman
+            </h1>
+          </div>
+          <div className="w-full mt-16">
+            <div className="w-full flex gap-8">
+              <div className="w-2/5">
+                <img src={photo8} className="w-full h-full rounded-xl" />
+              </div>
+              <div className="w-3/5 space-y-8">
+                <h1 className="text-3xl text-gray-500 text-semibold">
+                  Boost Brand Visibility and Engagement on Key Platforms{" "}
+                </h1>
+                <p className="text-gray-400 text-wrap">
+                  Maximize your brand’s presence on the platforms your audience
+                  loves. Our campaigns boost engagement, increase followers, and
+                  convert users into brand advocates.
+                </p>
+                <div className="flex flex-cols-1 md:flex-rows-3 gap-6 mt-12 md:mt-16">
+                  {numbers.map((number) => (
+                    <div
+                      key={number.id}
+                      className="bg-white rounded-xl flex justify-center items-center text-center border border-gray-200 gap-8"
+                    >
+                      <div className="grid justify-items-center items-start md:items-center gap-6 flex-1 p-4">
+                        <p className="text-blue-600 text-2xl font-bold">
+                          {number.number}
+                        </p>
+                        <p className="text-gray-500 text-md">{number.text}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+            <div className="hidden">
+              <div className="w-full flex gap-8">
+                <div className="w-2/5">
+                  <img src={photo9} className="w-full h-full rounded-xl" />
+                </div>
+                <div className="w-3/5 space-y-8">
+                  <h1 className="text-3xl text-gray-500 text-semibold">
+                    Improve Your Search Rankings And Drive Organic Traffic{" "}
+                  </h1>
+                  <p className="text-gray-400 text-wrap">
+                    Climb to the top of search results with our expert SEO
+                    services. We improve your website’s visibility, driving
+                    organic traffic from high-intent users.
+                  </p>
+                  <div className="flex flex-cols-1 md:flex-rows-3 gap-6 mt-12 md:mt-16">
+                    {numbers.map((number) => (
+                      <div
+                        key={number.id}
+                        className="bg-white rounded-xl flex justify-center items-center text-center border border-gray-300"
+                      >
+                        <div className="grid justify-items-center items-start md:items-center gap-6 flex-1 p-4">
+                          <p className="text-blue-600 text-2xl font-bold">
+                            {number.number}
+                          </p>
+                          <p className="text-gray-500 text-md">{number.text}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="hidden">
+              <div className="w-full flex gap-8">
+                <div className="w-2/5">
+                  <img src={photo10} className="w-full h-full rounded-xl" />
+                </div>
+                <div className="w-3/5 space-y-8">
+                  <h1 className="text-3xl text-gray-500 text-semibold">
+                    Personalized Email Campaigns For Higher Conversions{" "}
+                  </h1>
+                  <p className="text-gray-400 text-wrap">
+                    Climb to the top of search results with our expert SEO
+                    services. We improve your website’s visibility, driving
+                    organic traffic from high-intent users.
+                  </p>
+                  <div className="flex flex-cols-1 md:flex-rows-3 gap-6 mt-12 md:mt-16">
+                    {numbers.map((number) => (
+                      <div
+                        key={number.id}
+                        className="bg-white rounded-xl flex justify-center items-center text-center border border-gray-300"
+                      >
+                        <div className="grid justify-items-center items-start md:items-center gap-6 flex-1 p-4">
+                          <p className="text-blue-600 text-2xl font-bold">
+                            {number.number}
+                          </p>
+                          <p className="text-gray-500 text-md">{number.text}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="hidden">
+              <div className="w-full flex gap-8">
+                <div className="w-2/5">
+                  <img src={photo11} className="w-full h-full rounded-xl" />
+                </div>
+                <div className="w-3/5 space-y-8">
+                  <h1 className="text-3xl text-gray-500 text-semibold">
+                    Detailed Performance Reports To Track Progress And Optimize Strategies{" "}
+                  </h1>
+                  <p className="text-gray-400 text-wrap">
+                    Maximize your brand’s presence on the platforms your
+                    audience loves. Our campaigns boost engagement, increase
+                    followers, and convert users into brand advocates.
+                  </p>
+                  <div className="flex flex-cols-1 md:flex-rows-3 gap-6 mt-12 md:mt-16">
+                    {numbers.map((number) => (
+                      <div
+                        key={number.id}
+                        className="bg-white rounded-xl flex justify-center items-center text-center border border-gray-300"
+                      >
+                        <div className="grid justify-items-center items-start md:items-center gap-6 flex-1 p-4">
+                          <p className="text-blue-600 text-2xl font-bold">
+                            {number.number}
+                          </p>
+                          <p className="text-gray-500 text-md">{number.text}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div className="mt-28 px-8 mb-12">
@@ -186,11 +369,15 @@ function Service() {
                     {steps.map((step) => (
                       <div
                         key={step.id}
-                        className="bg-white border-gray-300 border rounded-2xl shadow-md p-4 space-y-4"
+                        className="bg-white border-gray-100 border rounded-2xl shadow-md p-4 space-y-4"
                       >
-                        <h1 className="text-black font-semibold text-xl">{step.heading}</h1>
+                        <h1 className="text-black font-semibold text-xl">
+                          {step.heading}
+                        </h1>
                         <p className="text-wrap text-gray-600">{step.para}</p>
-                        <h1 className="text-3xl text-blue-700 font-bold">{step.number}</h1>
+                        <h1 className="text-3xl text-blue-700 font-bold">
+                          {step.number}
+                        </h1>
                       </div>
                     ))}
                   </div>
