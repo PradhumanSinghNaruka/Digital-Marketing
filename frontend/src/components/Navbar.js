@@ -65,18 +65,26 @@
 // export default Navbar;
 import React, { useState } from "react";
 import photo from "../image/logo4.png";
-import { MdEmail } from "react-icons/md";
-import { FaPhoneAlt } from "react-icons/fa";
 import { HiMenu, HiX } from "react-icons/hi";
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-function Navbar({ cartItemCount }) {
+function Navbar() {
   const [navOpen, setNavOpen] = useState(false);
+  const [mobileServiceOpen, setMobileServiceOpen] = useState(false);
   const navigate = useNavigate();
+
   const navItems = [
-    { id: 1, text: "HOME", path: "/"},
+    { id: 1, text: "HOME", path: "/" },
     { id: 2, text: "ABOUT US", path: "/about" },
-    { id: 4, text: "SERVICE", path: "/service" },
+    {
+      id: 4,
+      text: "SERVICE",
+      subItems: [
+        { id: "s1", text: "Service Details", path: "/service" },
+        { id: "s2", text: "SEO", path: "/service/smm" },
+        { id: "s3", text: "Socal Media Marketing", path: "/service/content" },
+      ],
+    },
     { id: 5, text: "BLOG", path: "/blog" },
     { id: 6, text: "CONTACT US", path: "/contactus" },
   ];
@@ -88,33 +96,94 @@ function Navbar({ cartItemCount }) {
           src={photo}
           alt="Searchnix"
           className="h-36 sm:h-36 md:h-32 lg:h-40 cursor-pointer"
+          onClick={() => navigate("/")}
         />
         <ul className="hidden md:flex space-x-6 lg:space-x-12 font-semibold text-black">
-          {navItems.map(({ id, text, path }) => (
-            <li
-              key={id}
-              className="hover:text-blue-800 cursor-pointer hover:scale-105 duration-200"
-            >
-              <span onClick={() => navigate(path)} className="text-lg">{text}</span>
+          {navItems.map(({ id, text, path, subItems }) => (
+            <li key={id} className="relative group">
+              {subItems ? (
+                <span className="hover:text-blue-800 cursor-pointer hover:scale-105 duration-200 text-lg">
+                  {text}
+                </span>
+              ) : (
+                <span
+                  onClick={() => navigate(path)}
+                  className="hover:text-blue-800 cursor-pointer hover:scale-105 duration-200 text-lg"
+                >
+                  {text}
+                </span>
+              )}
+              {subItems && (
+                <ul className="absolute top-full left-0 mt-2 bg-white border shadow-md rounded w-56 hidden group-hover:block">
+                  {subItems.map((sub) => (
+                    <li
+                      key={sub.id}
+                      className="px-4 py-2 hover:bg-blue-100 cursor-pointer"
+                      onClick={() => navigate(sub.path)}
+                    >
+                      {sub.text}
+                    </li>
+                  ))}
+                </ul>
+              )}
             </li>
           ))}
-        </ul>          
-          <div
-            className="md:hidden cursor-pointer text-2xl text-black"
-            onClick={() => setNavOpen(!navOpen)}
-          >
-            {navOpen ? <HiX /> : <HiMenu />}
-          </div>
+        </ul>
+        <div
+          className="md:hidden cursor-pointer text-2xl text-black"
+          onClick={() => setNavOpen(!navOpen)}
+        >
+          {navOpen ? <HiX /> : <HiMenu />}
+        </div>
       </div>
       {navOpen && (
         <ul className="md:hidden bg-white px-6 py-4 space-y-4 shadow-lg">
-          {navItems.map(({ id, text, path }) => (
-            <li
-              key={id}
-              className="text-black font-semibold hover:text-blue-500 cursor-pointer border-b border-gray-200 pb-2"
-              onClick={() => setNavOpen(false)}
-            >
-              <span onClick={() => navigate((path))}>{text}</span>
+          {navItems.map(({ id, text, path, subItems }) => (
+            <li key={id} className="text-black font-semibold border-b border-gray-200 pb-2">
+              <div
+                className="flex justify-between items-center cursor-pointer"
+                onClick={() => {
+                  if (subItems) {
+                    setMobileServiceOpen(!mobileServiceOpen);
+                  } else {
+                    navigate(path);
+                    setNavOpen(false);
+                  }
+                }}
+              >
+                <span>{text}</span>
+                {subItems && (
+                  <span className="text-xl">
+                    {mobileServiceOpen ? "-" : "+"}
+                  </span>
+                )}
+              </div>
+
+              {subItems && (
+                <div
+                  className={`transform transition-all origin-top ${
+                    mobileServiceOpen
+                      ? "scale-y-100 opacity-100 max-h-96"
+                      : "scale-y-0 opacity-0 max-h-0"
+                  } overflow-hidden`}
+                >
+                  <ul className="pl-4 mt-2 space-y-2">
+                    {subItems.map((sub) => (
+                      <li
+                        key={sub.id}
+                        className="text-gray-700 hover:text-blue-500 cursor-pointer"
+                        onClick={() => {
+                          navigate(sub.path);
+                          setNavOpen(false);
+                          setMobileServiceOpen(false);
+                        }}
+                      >
+                        {sub.text}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </li>
           ))}
         </ul>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import photo3 from "../image/servicedetail3.png";
 import photo4 from "../image/servicedetail4.png";
 import photo5 from "../image/servicedetail5.png";
@@ -15,6 +15,7 @@ import photo2 from "../image/servicedetail2.jpg";
 import { useNavigate } from "react-router-dom";
 
 function Service() {
+  const [activeTab, setActiveTab] = useState(1);
   const items = [
     {
       id: 1,
@@ -87,6 +88,24 @@ function Service() {
     },
   ];
 
+  const numbers2 = [
+    {
+      id:1,
+      number: "+200%",
+      text: "ORGANIC TRAFFIC"
+    },
+    {
+      id:2,
+      number: "#3",
+      text: "COMPETITIVE KEYWORDS"
+    },
+    {
+      id:3,
+      number: "+35%",
+      text: "CLICK-THROUGH RATES"
+    }
+  ]
+
   return (
     <div
       name="Home"
@@ -143,7 +162,7 @@ function Service() {
             <img src={photo2} className="rounded-2xl" />
           </div>
         </div>
-        <div className="mt-32 w-full mb-12">
+        <div className="mt-32 w-full mb-20">
           <div className="bg-white w-full space-y-5 justify-center items-center text-center px-48">
             <h1 className="text-blue-500 text-md">Core Channels</h1>
             <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold px-24">
@@ -159,153 +178,193 @@ function Service() {
               measurable results.
             </p>
           </div>
-          <div className="w-full px-6 flex border rounded-xl mt-12 space-x-6 bg-gray-200 py-4">
-            <h1 className="p-3 text-center w-[270px] border rounded-xl hover:text-white hover:bg-blue-600 duration-300">
-              Pradhuman
-            </h1>
-            <h1 className="p-3 text-center w-[270px] border rounded-xl hover:text-white hover:bg-blue-600 duration-300">
-              Pradhuman
-            </h1>
-            <h1 className="p-3 text-center w-[270px] border rounded-xl hover:text-white hover:bg-blue-600 duration-300">
-              Pradhuman
-            </h1>
-            <h1 className="p-3 text-center w-[270px] border rounded-xl hover:text-white hover:bg-blue-600 duration-300">
-              Pradhuman
-            </h1>
-          </div>
-          <div className="w-full mt-16">
-            <div className="w-full flex gap-8">
-              <div className="w-2/5">
-                <img src={photo8} className="w-full h-full rounded-xl" />
-              </div>
-              <div className="w-3/5 space-y-8">
-                <h1 className="text-3xl text-gray-500 text-semibold">
-                  Boost Brand Visibility and Engagement on Key Platforms{" "}
-                </h1>
-                <p className="text-gray-400 text-wrap">
-                  Maximize your brand’s presence on the platforms your audience
-                  loves. Our campaigns boost engagement, increase followers, and
-                  convert users into brand advocates.
-                </p>
-                <div className="flex flex-cols-1 md:flex-rows-3 gap-6 mt-12 md:mt-16">
-                  {numbers.map((number) => (
-                    <div
-                      key={number.id}
-                      className="bg-white rounded-xl flex justify-center items-center text-center border border-gray-200 gap-8"
-                    >
-                      <div className="grid justify-items-center items-start md:items-center gap-6 flex-1 p-4">
-                        <p className="text-blue-600 text-2xl font-bold">
-                          {number.number}
-                        </p>
-                        <p className="text-gray-500 text-md">{number.text}</p>
-                      </div>
+          <div className="w-full px-4">
+            <div className="flex border rounded-xl mt-12 space-x-6 bg-gray-200 py-4">
+              <h1
+                onClick={() => setActiveTab(1)}
+                className={`p-3 text-center w-[270px] border rounded-md duration-300 cursor-pointer ml-6 ${
+                  activeTab === 1
+                    ? "bg-blue-600 text-white"
+                    : "hover:bg-blue-600 hover:text-white"
+                }`}
+              >
+                Social Media Marketing
+              </h1>
+              <h1
+                onClick={() => setActiveTab(2)}
+                className={`p-3 text-center w-[270px] border rounded-md duration-300 cursor-pointer ${
+                  activeTab === 2
+                    ? "bg-blue-600 text-white"
+                    : "hover:bg-blue-600 hover:text-white"
+                }`}
+              >
+                SEO
+              </h1>
+              <h1
+                onClick={() => setActiveTab(3)}
+                className={`p-3 text-center w-[270px] border rounded-md duration-300 cursor-pointer ${
+                  activeTab === 3
+                    ? "bg-blue-600 text-white"
+                    : "hover:bg-blue-600 hover:text-white"
+                }`}
+              >
+                Email Marketing
+              </h1>
+              <h1
+                onClick={() => setActiveTab(4)}
+                className={`p-3 text-center w-[270px] border rounded-md duration-300 cursor-pointer ${
+                  activeTab === 4
+                    ? "bg-blue-600 text-white"
+                    : "hover:bg-blue-600 hover:text-white"
+                }`}
+              >
+                Analytics
+              </h1>
+            </div>
+            <div className="w-full mt-16">
+              {activeTab === 1 && (
+                <div className="w-full flex gap-8">
+                  <div className="w-2/5">
+                    <img src={photo8} className="w-full h-full rounded-xl" />
+                  </div>
+                  <div className="w-3/5 space-y-8">
+                    <h1 className="text-3xl text-gray-500 font-semibold">
+                      Boost Brand Visibility and Engagement on Key Platforms
+                    </h1>
+                    <p className="text-gray-400">
+                      Maximize your brand’s presence on the platforms your
+                      audience loves...
+                    </p>
+                    <div className="flex flex-cols-1 md:flex-rows-3 gap-6 mt-12 md:mt-16">
+                      {numbers.map((number) => (
+                        <div
+                          key={number.id}
+                          className="bg-white rounded-xl flex justify-center items-center text-center border border-gray-200 gap-8"
+                        >
+                          <div className="grid justify-items-center items-start md:items-center gap-6 flex-1 p-4">
+                            <p className="text-blue-600 text-2xl font-bold">
+                              {number.number}
+                            </p>
+                            <p className="text-gray-500 text-md">
+                              {number.text}
+                            </p>
+                          </div>
+                        </div>
+                      ))}
                     </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-            <div className="hidden">
-              <div className="w-full flex gap-8">
-                <div className="w-2/5">
-                  <img src={photo9} className="w-full h-full rounded-xl" />
-                </div>
-                <div className="w-3/5 space-y-8">
-                  <h1 className="text-3xl text-gray-500 text-semibold">
-                    Improve Your Search Rankings And Drive Organic Traffic{" "}
-                  </h1>
-                  <p className="text-gray-400 text-wrap">
-                    Climb to the top of search results with our expert SEO
-                    services. We improve your website’s visibility, driving
-                    organic traffic from high-intent users.
-                  </p>
-                  <div className="flex flex-cols-1 md:flex-rows-3 gap-6 mt-12 md:mt-16">
-                    {numbers.map((number) => (
-                      <div
-                        key={number.id}
-                        className="bg-white rounded-xl flex justify-center items-center text-center border border-gray-300"
-                      >
-                        <div className="grid justify-items-center items-start md:items-center gap-6 flex-1 p-4">
-                          <p className="text-blue-600 text-2xl font-bold">
-                            {number.number}
-                          </p>
-                          <p className="text-gray-500 text-md">{number.text}</p>
-                        </div>
-                      </div>
-                    ))}
                   </div>
                 </div>
-              </div>
-            </div>
-            <div className="hidden">
-              <div className="w-full flex gap-8">
-                <div className="w-2/5">
-                  <img src={photo10} className="w-full h-full rounded-xl" />
-                </div>
-                <div className="w-3/5 space-y-8">
-                  <h1 className="text-3xl text-gray-500 text-semibold">
-                    Personalized Email Campaigns For Higher Conversions{" "}
-                  </h1>
-                  <p className="text-gray-400 text-wrap">
-                    Climb to the top of search results with our expert SEO
-                    services. We improve your website’s visibility, driving
-                    organic traffic from high-intent users.
-                  </p>
-                  <div className="flex flex-cols-1 md:flex-rows-3 gap-6 mt-12 md:mt-16">
-                    {numbers.map((number) => (
-                      <div
-                        key={number.id}
-                        className="bg-white rounded-xl flex justify-center items-center text-center border border-gray-300"
-                      >
-                        <div className="grid justify-items-center items-start md:items-center gap-6 flex-1 p-4">
-                          <p className="text-blue-600 text-2xl font-bold">
-                            {number.number}
-                          </p>
-                          <p className="text-gray-500 text-md">{number.text}</p>
+              )}
+
+              {activeTab === 2 && (
+                <div className="w-full flex gap-8">
+                  <div className="w-2/5">
+                    <img src={photo9} className="w-full h-full rounded-xl" />
+                  </div>
+                  <div className="w-3/5 space-y-8">
+                    <h1 className="text-3xl text-gray-500 font-semibold">
+                      Improve Your Search Rankings And Drive Organic Traffic
+                    </h1>
+                    <p className="text-gray-400">
+                      Climb to the top of search results with our expert SEO
+                      services...
+                    </p>
+                    <div className="flex flex-cols-1 md:flex-rows-3 gap-6 mt-12 md:mt-16">
+                      {numbers2.map((number2) => (
+                        <div
+                          key={number2.id}
+                          className="bg-white rounded-xl flex justify-center items-center text-center border border-gray-200 gap-8"
+                        >
+                          <div className="grid justify-items-center items-start md:items-center gap-6 flex-1 p-4">
+                            <p className="text-blue-600 text-2xl font-bold">
+                              {number2.number}
+                            </p>
+                            <p className="text-gray-500 text-md">
+                              {number2.text}
+                            </p>
+                          </div>
                         </div>
-                      </div>
-                    ))}
+                      ))}
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div className="hidden">
-              <div className="w-full flex gap-8">
-                <div className="w-2/5">
-                  <img src={photo11} className="w-full h-full rounded-xl" />
-                </div>
-                <div className="w-3/5 space-y-8">
-                  <h1 className="text-3xl text-gray-500 text-semibold">
-                    Detailed Performance Reports To Track Progress And Optimize Strategies{" "}
-                  </h1>
-                  <p className="text-gray-400 text-wrap">
-                    Maximize your brand’s presence on the platforms your
-                    audience loves. Our campaigns boost engagement, increase
-                    followers, and convert users into brand advocates.
-                  </p>
-                  <div className="flex flex-cols-1 md:flex-rows-3 gap-6 mt-12 md:mt-16">
-                    {numbers.map((number) => (
-                      <div
-                        key={number.id}
-                        className="bg-white rounded-xl flex justify-center items-center text-center border border-gray-300"
-                      >
-                        <div className="grid justify-items-center items-start md:items-center gap-6 flex-1 p-4">
-                          <p className="text-blue-600 text-2xl font-bold">
-                            {number.number}
-                          </p>
-                          <p className="text-gray-500 text-md">{number.text}</p>
+              )}
+
+              {activeTab === 3 && (
+                <div className="w-full flex gap-8">
+                  <div className="w-2/5">
+                    <img src={photo10} className="w-full h-full rounded-xl" />
+                  </div>
+                  <div className="w-3/5 space-y-8">
+                    <h1 className="text-3xl text-gray-500 font-semibold">
+                      Personalized Email Campaigns For Higher Conversions
+                    </h1>
+                    <p className="text-gray-400">
+                      Run personalized email campaigns that convert better and
+                      boost engagement...
+                    </p>
+                    <div className="flex flex-cols-1 md:flex-rows-3 gap-6 mt-12 md:mt-16">
+                      {numbers.map((number) => (
+                        <div
+                          key={number.id}
+                          className="bg-white rounded-xl flex justify-center items-center text-center border border-gray-200 gap-8"
+                        >
+                          <div className="grid justify-items-center items-start md:items-center gap-6 flex-1 p-4">
+                            <p className="text-blue-600 text-2xl font-bold">
+                              {number.number}
+                            </p>
+                            <p className="text-gray-500 text-md">
+                              {number.text}
+                            </p>
+                          </div>
                         </div>
-                      </div>
-                    ))}
+                      ))}
+                    </div>
                   </div>
                 </div>
-              </div>
+              )}
+
+              {activeTab === 4 && (
+                <div className="w-full flex gap-8">
+                  <div className="w-2/5">
+                    <img src={photo11} className="w-full h-full rounded-xl" />
+                  </div>
+                  <div className="w-3/5 space-y-8">
+                    <h1 className="text-3xl text-gray-500 font-semibold">
+                      Detailed Performance Reports To Track Progress And
+                      Optimize Strategies
+                    </h1>
+                    <p className="text-gray-400">
+                      Get detailed performance reports to monitor growth and
+                      improve your strategies...
+                    </p>
+                    <div className="flex flex-cols-1 md:flex-rows-3 gap-6 mt-12 md:mt-16">
+                      {numbers2.map((number2) => (
+                        <div
+                          key={number2.id}
+                          className="bg-white rounded-xl flex justify-center items-center text-center border border-gray-200 gap-8"
+                        >
+                          <div className="grid justify-items-center items-start md:items-center gap-6 flex-1 p-4">
+                            <p className="text-blue-600 text-2xl font-bold">
+                              {number2.number}
+                            </p>
+                            <p className="text-gray-500 text-md">
+                              {number2.text}
+                            </p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
-        <div className="mt-28 px-8 mb-12">
+        <div className="mt-32 px-8 mb-12">
           <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-8">
             <div className="md:w-1/2 flex flex-col items-start text-start space-y-4">
-              <p className="text-base md:text-lg font-semibold uppercase tracking-wider text-blue-500">
+              <p className="text-base md:text-md font-semibold uppercase tracking-wider text-blue-500">
                 CUSTOM STRATEGIC
               </p>
               <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold w-full">
@@ -324,7 +383,7 @@ function Service() {
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-12 md:mt-16">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-12 md:mt-16 mb-24">
             {items.map((item) => (
               <div
                 key={item.id}
@@ -342,10 +401,10 @@ function Service() {
               </div>
             ))}
           </div>
-          <div className="mt-10 md:mt-24">
+          <div className="mt-10 md:mt-28">
             <div className="grid md:justify-between md:items-start gap-8">
               <div className="wfull flex flex-col items-center text-center space-y-4 px-14 md:px-44">
-                <p className="text-base md:text-lg font-semibold uppercase tracking-wider text-blue-500">
+                <p className="text-base md:text-md font-semibold uppercase tracking-wider text-blue-500">
                   PROVEN RESULTS
                 </p>
                 <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold w-full">
